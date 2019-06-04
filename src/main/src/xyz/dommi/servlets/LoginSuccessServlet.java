@@ -2,6 +2,7 @@ package xyz.dommi.servlets;
 
 import bell.oauth.discord.domain.User;
 import bell.oauth.discord.main.Response;
+import com.mongodb.DB;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.db.UserDB;
 
@@ -26,10 +27,11 @@ public class LoginSuccessServlet extends HttpServlet {
            System.out.println("Error");
         } else {
             User user =  LoginServlet.builder.getUser();
+
             DBConnection dbConnection = new DBConnection();
-            dbConnection.connect();
-            UserDB userDB = new UserDB(dbConnection.getConnection());
-            dbConnection.close();
+            DB db = dbConnection.connect();
+            UserDB userDB = new UserDB(db);
+            userDB.createUser(user.getId(),user.getUsername(),user.getEmail());
         }
     }
 }

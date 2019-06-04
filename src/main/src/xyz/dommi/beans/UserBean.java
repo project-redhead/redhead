@@ -1,5 +1,6 @@
 package xyz.dommi.beans;
 
+import com.mongodb.DB;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.db.UserDB;
 
@@ -17,13 +18,12 @@ public class UserBean {
         setId(id);
         if(getId() != null && !getId().equalsIgnoreCase("")){
             DBConnection dbConnection = new DBConnection();
-            dbConnection.connect();
-            UserDB userDB = new UserDB(dbConnection.getConnection());
+            DB db = dbConnection.connect();
+            UserDB userDB = new UserDB(db);
             name = userDB.getName(id);
             email = userDB.getEmail(id);
             points = userDB.getPoints(id);
             role = userDB.getRoleID(id);
-            dbConnection.close();
         }
     }
 
@@ -35,10 +35,9 @@ public class UserBean {
         this.name = name;
         if(getId() != null && !getId().equalsIgnoreCase("")){
             DBConnection dbConnection = new DBConnection();
-            dbConnection.connect();
-            UserDB userDB = new UserDB(dbConnection.getConnection());
+            DB db = dbConnection.connect();
+            UserDB userDB = new UserDB(db);
             userDB.setName(getId(),name);
-            dbConnection.close();
         }
     }
 
@@ -46,10 +45,9 @@ public class UserBean {
         this.email = email;
         if(getId() != null && !getId().equalsIgnoreCase("")){
             DBConnection dbConnection = new DBConnection();
-            dbConnection.connect();
-            UserDB userDB = new UserDB(dbConnection.getConnection());
+            DB db = dbConnection.connect();
+            UserDB userDB = new UserDB(db);
             userDB.setEmail(getId(),email);
-            dbConnection.close();
         }
     }
 
@@ -57,10 +55,9 @@ public class UserBean {
         this.points = points;
         if(getId() != null && !getId().equalsIgnoreCase("")){
             DBConnection dbConnection = new DBConnection();
-            dbConnection.connect();
-            UserDB userDB = new UserDB(dbConnection.getConnection());
+            DB db = dbConnection.connect();
+            UserDB userDB = new UserDB(db);
             userDB.setPoints(getId(),points);
-            dbConnection.close();
         }
     }
 
@@ -68,10 +65,9 @@ public class UserBean {
         this.role = role;
         if(getId() != null && !getId().equalsIgnoreCase("")){
             DBConnection dbConnection = new DBConnection();
-            dbConnection.connect();
-            UserDB userDB = new UserDB(dbConnection.getConnection());
+            DB db = dbConnection.connect();
+            UserDB userDB = new UserDB(db);
             userDB.setRoleID(getId(),role);
-            dbConnection.close();
         }
     }
 
