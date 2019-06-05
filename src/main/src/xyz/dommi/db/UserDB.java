@@ -4,9 +4,11 @@ import com.mongodb.BasicDBList;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class UserDB extends DBManager{
 
@@ -26,7 +28,9 @@ public class UserDB extends DBManager{
     public int getPoints(String id){
         return getIntByID(id,"roleID");
     }
-
+    public List<DBObject> getUsers(){
+       return getDBObjectListByCollection();
+    }
     public void setName(String id, String name){
         setStringByID(id,"name", name);
     }
@@ -40,13 +44,19 @@ public class UserDB extends DBManager{
         setIntByID(id,"points", points);
     }
 
-    public void addBet(String id, String gameid, int amount, int option){
-        BasicDBObject bet = new BasicDBObject()
-                .append("gameid",gameid)
-                .append("date", new Date())
-                .append("amount",amount)
-                .append("option",option);
-        pushDBObjectByID(id,bet);
+    public boolean addBet(String id, String gameid, int amount, int option){
+        BetGameDB gameDB = new BetGameDB(db);
+        if(getPoints(id)>= amount){
+            setPoints(id,getPoints(id)-amount);
+            gameDB.addBet(gameid,id,amount,option);
+            return true;
+        }
+        return false;
+    }
+    public boolean addGame(String id, String description, List<String> options){
+        BetGameDB gameDB = new BetGameDB(db);
+        gameDB.createBetGame(description,id, options);
+        return true;
     }
 
     public boolean userExists(String id){
@@ -58,7 +68,6 @@ public class UserDB extends DBManager{
             DBObject user = new BasicDBObject("_id", id)
                                 .append("name", name)
                                 .append("email", email)
-                                .append("bets", new BasicDBList())
                                 .append("points",0)
                                 .append("roleid","user");
             getCollection().insert(user);
