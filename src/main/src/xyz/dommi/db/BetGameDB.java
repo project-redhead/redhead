@@ -4,11 +4,8 @@ import com.mongodb.BasicDBList;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBObject;
-import com.mongodb.util.JSON;
 import org.json.JSONArray;
-import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -25,6 +22,9 @@ public class BetGameDB extends DBManager {
     public Date getDate(String id) {
         return getDateByID(id, "date");
     }
+    public Date getTimeLimit(String id) {
+        return getDateByID(id, "timelimit");
+    }
 
     public String getCreator(String id) {
         return getStringByID(id, "creator");
@@ -40,6 +40,10 @@ public class BetGameDB extends DBManager {
         }catch (NumberFormatException e){
             return -1;
         }
+    }
+
+    public boolean isBetTimeValid(String id){
+        return getTimeLimit(id).after(new Date());
     }
 
     public JSONArray getGames() {
@@ -143,10 +147,11 @@ public class BetGameDB extends DBManager {
 
     }
 
-    public void createBetGame(String description, String creatorId, List<String> options) {
+    public void createBetGame(String description, String creatorId, List<String> options, Date timelimit) {
         DBObject user = new BasicDBObject()
                 .append("description", description)
                 .append("date", new Date())
+                .append("timelimit", timelimit)
                 .append("creator", creatorId)
                 .append("bets", new BasicDBList())
                 .append("options", new BasicDBList().addAll(options))
