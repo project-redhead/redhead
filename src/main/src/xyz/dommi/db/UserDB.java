@@ -24,7 +24,7 @@ public class UserDB extends DBManager {
     }
 
     public int getPoints(String id) {
-        return getIntByID(id, "roleID");
+        return getIntByID(id, "points");
     }
 
     public List<DBObject> getUsers() {
@@ -49,7 +49,7 @@ public class UserDB extends DBManager {
 
     public boolean addBet(String id, String gameid, int amount, int option) {
         BetGameDB gameDB = new BetGameDB(db);
-        if (gameDB.isBetTimeValid(gameid)) {
+        if (gameDB.isBetTimeValid(gameid) && gameDB.isUserValid(gameid,id)) {
             if (getPoints(id) >= amount) {
                 setPoints(id, getPoints(id) - amount);
                 gameDB.addBet(gameid, id, amount, option);

@@ -8,44 +8,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17e6bdd5-5834-4b68-8215-6566e903f873" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/dataSources/62c7d608-1113-4590-b69b-a7dbb09f80bd.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/DHBWProject.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/DHBWProject/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/classes/META-INF/intelij.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/lib/OAuth2Discord--4fded51caa-1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/lib/json-20171018.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/lib/mariadb-java-client-2.4.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/lib/okhttp-3.9.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/lib/okio-1.13.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/DHBWProject/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/target/classes/META-INF/intelij.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/xyz/dommi/beans/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/xyz/dommi/beans/UserBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/xyz/dommi/db/BetDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.idea/dataSources/62c7d608-1113-4590-b69b-a7dbb09f80bd.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/src/main/src/xyz/dommi/beans/UserBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/src/main/src/xyz/dommi/db/BetGameDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/src/main/src/xyz/dommi/db/DBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/src/main/src/xyz/dommi/db/DBManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/src/main/src/xyz/dommi/db/UserDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/src/main/src/xyz/dommi/servlets/BetServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/src/main/src/xyz/dommi/servlets/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/src/main/src/xyz/dommi/servlets/LoginSuccessServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/src/main/src/xyz/dommi/servlets/UserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/target/DHBWProject.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/target/DHBWProject/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/target/DHBWProject/WEB-INF/classes/META-INF/intelij.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/target/DHBWProject/WEB-INF/lib/OAuth2Discord--4fded51caa-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/target/DHBWProject/WEB-INF/lib/json-20171018.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/target/DHBWProject/WEB-INF/lib/mariadb-java-client-2.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/target/DHBWProject/WEB-INF/lib/okhttp-3.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/target/DHBWProject/WEB-INF/lib/okio-1.13.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/target/DHBWProject/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bin/target/DHBWProject/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/src/xyz/dommi/beans/UserBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/src/xyz/dommi/db/BetGameDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/src/xyz/dommi/db/DBConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/src/xyz/dommi/db/DBManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/src/xyz/dommi/db/UserDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/src/xyz/dommi/servlets/BetServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/src/xyz/dommi/servlets/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/src/xyz/dommi/servlets/LoginSuccessServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/src/xyz/dommi/servlets/UserServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/classes/xyz/dommi/beans/UserBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/classes/xyz/dommi/db/BetGameDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/classes/xyz/dommi/db/DBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/classes/xyz/dommi/db/DBManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/classes/xyz/dommi/db/UserDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/classes/xyz/dommi/servlets/BetServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/classes/xyz/dommi/servlets/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/classes/xyz/dommi/servlets/LoginSuccessServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/DHBWProject/WEB-INF/classes/xyz/dommi/servlets/UserServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/classes/xyz/dommi/beans/UserBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/classes/xyz/dommi/db/BetGameDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/classes/xyz/dommi/db/DBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/classes/xyz/dommi/db/DBManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/classes/xyz/dommi/db/UserDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/classes/xyz/dommi/servlets/BetServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/classes/xyz/dommi/servlets/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/classes/xyz/dommi/servlets/LoginSuccessServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/classes/xyz/dommi/servlets/UserServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/src/xyz/dommi/db/BetGameDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/xyz/dommi/db/BetGameDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/xyz/dommi/db/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/xyz/dommi/db/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/xyz/dommi/db/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/xyz/dommi/db/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/xyz/dommi/db/OptionsDB.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/src/xyz/dommi/db/UserDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/xyz/dommi/db/UserDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/src/xyz/dommi/servlets/LoginSuccessServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/src/xyz/dommi/servlets/LoginSuccessServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/intelij.kotlin_module" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,7 +121,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/servlets/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
+            <state relative-caret-position="460">
               <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -134,31 +163,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/db/BetGameDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="148" column="43" selection-start-line="148" selection-start-column="43" selection-end-line="148" selection-end-column="43" />
+            <state relative-caret-position="428">
+              <caret line="48" column="50" lean-forward="true" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#575#576#0" expanded="true" />
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="e#1142#1143#0" expanded="true" />
+                <element signature="e#1006#1007#0" expanded="true" />
                 <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="e#3610#3611#0" expanded="true" />
                 <element signature="e#3661#3662#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/db/UserDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+            <state relative-caret-position="336">
+              <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1775#1776#0" expanded="true" />
-                <element signature="e#1823#1824#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,19 +196,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/db/DBManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+            <state relative-caret-position="265">
+              <caret line="71" column="18" lean-forward="true" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#919#920#0" expanded="true" />
                 <element signature="e#972#973#0" expanded="true" />
-                <element signature="e#1033#1034#0" expanded="true" />
-                <element signature="e#1086#1087#0" expanded="true" />
-                <element signature="e#1172#1173#0" expanded="true" />
-                <element signature="e#1232#1233#0" expanded="true" />
-                <element signature="e#1271#1272#0" expanded="true" />
-                <element signature="e#1341#1342#0" expanded="true" />
-                <element signature="e#1394#1395#0" expanded="true" />
-                <element signature="e#1449#1450#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -224,8 +246,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/src/xyz/dommi/db/DBManager.java" />
         <option value="$PROJECT_DIR$/src/main/src/xyz/dommi/db/DBConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/src/xyz/dommi/db/UserDB.java" />
         <option value="$PROJECT_DIR$/src/main/src/xyz/dommi/db/BetGameDB.java" />
+        <option value="$PROJECT_DIR$/src/main/src/xyz/dommi/db/UserDB.java" />
       </list>
     </option>
   </component>
@@ -276,7 +298,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -324,21 +345,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="hsqldb&#10;mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559658510540" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559803447195" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.protractor.protractor_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -539,12 +561,13 @@
       <workItem from="1558938531378" duration="10952000" />
       <workItem from="1559027239316" duration="8794000" />
       <workItem from="1559331105969" duration="87000" />
-      <workItem from="1559714648969" duration="7202000" />
+      <workItem from="1559714648969" duration="8191000" />
+      <workItem from="1559802755108" duration="615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59650000" />
+    <option name="totallyTimeSpent" value="61254000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -565,12 +588,12 @@
       <window_info id="Favorites" order="3" sideWeight="0.51265824" side_tool="true" weight="0.27114093" />
       <window_info id="Web" order="4" sideWeight="0.5084388" side_tool="true" weight="0.27114093" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.48734176" visible="true" weight="0.2751678" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.48734176" visible="true" weight="0.27919462" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Messages" order="3" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" weight="0.3286119" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.3286119" />
@@ -721,16 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/beans/UserBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/dhbwrepo/org/mongodb/mongo-java-driver/2.12.3/mongo-java-driver-2.12.3.jar!/com/mongodb/util/JSON.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -742,16 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/servlets/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -773,10 +776,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/db/DBConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/servlets/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/beans/UserBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -790,47 +803,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/db/DBManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/db/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        <state relative-caret-position="460">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#972#973#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-            <element signature="e#1172#1173#0" expanded="true" />
-            <element signature="e#1232#1233#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#1341#1342#0" expanded="true" />
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1449#1450#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/db/UserDB.java">
+    <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/db/DBManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+        <state relative-caret-position="265">
+          <caret line="71" column="18" lean-forward="true" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1775#1776#0" expanded="true" />
-            <element signature="e#1823#1824#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#972#973#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="929" column="19" selection-start-line="929" selection-start-column="19" selection-end-line="929" selection-end-column="19" />
+          <folding>
+            <element signature="e#39232#39233#0" expanded="true" />
+            <element signature="e#39292#39293#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/db/BetGameDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="148" column="43" selection-start-line="148" selection-start-column="43" selection-end-line="148" selection-end-column="43" />
+        <state relative-caret-position="428">
+          <caret line="48" column="50" lean-forward="true" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1142#1143#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
             <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#3610#3611#0" expanded="true" />
             <element signature="e#3661#3662#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/src/xyz/dommi/db/UserDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -854,7 +881,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Web (DHBWProject)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -902,7 +929,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.github.HayateLaTech:OAuth2Discord:-4fded51caa-1</last-edited>
+          <last-edited>Java EE 6-Java EE 6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -3,6 +3,7 @@ package xyz.dommi.servlets;
 import bell.oauth.discord.domain.User;
 import bell.oauth.discord.main.Response;
 import com.mongodb.DB;
+import xyz.dommi.beans.UserBean;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.db.UserDB;
 
@@ -32,6 +33,9 @@ public class LoginSuccessServlet extends HttpServlet {
             DB db = dbConnection.connect();
             UserDB userDB = new UserDB(db);
             userDB.createUser(user.getId(),user.getUsername(),user.getEmail());
+            UserBean userBean = new UserBean(user.getId());
+            request.setAttribute("user", userBean);
+            request.getServletContext().getRequestDispatcher("/").forward(request,response);
         }
     }
 }
