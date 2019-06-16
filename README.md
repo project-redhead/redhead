@@ -1,6 +1,6 @@
-#Project RedHead ServerSide
+# Project RedHead ServerSide
 
-##Communication API
+## Communication API
 1. Basic Structure
     * Basic Request Structure:\
       example: http://localhost:8080/request?type=Requesttype&parameter1=1&parameter2=2
