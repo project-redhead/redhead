@@ -11,6 +11,10 @@ public class UserDB extends DBManager {
         super(db, "Users");
     }
 
+    public DBObject getUser(String id) {
+        return getObjectByID(id);
+    }
+
     public String getName(String id) {
         return getStringByID(id, "name");
     }
