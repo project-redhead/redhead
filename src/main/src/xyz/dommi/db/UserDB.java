@@ -3,6 +3,9 @@ package xyz.dommi.db;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBObject;
+import xyz.dommi.requests.Response;
+import xyz.dommi.requests.ResponseType;
+
 import java.util.List;
 
 public class UserDB extends DBManager {
@@ -51,16 +54,23 @@ public class UserDB extends DBManager {
         setIntByID(id, "points", points);
     }
 
-    public boolean addBet(String id, String gameid, int amount, int option) {
+    public Response addBet(String id, String gameid, int amount, int option) {
         BetGameDB gameDB = new BetGameDB(db);
-        if (gameDB.isBetTimeValid(gameid) && gameDB.isUserValid(gameid,id)) {
-            if (getPoints(id) >= amount) {
-                setPoints(id, getPoints(id) - amount);
-                gameDB.addBet(gameid, id, amount, option);
-                return true;
+        if (gameDB.isBetTimeValid(gameid)) {
+            if (gameDB.isUserValid(gameid, id)) {
+                if (amount > 0) {
+                    if (getPoints(id) >= amount) {
+                        setPoints(id, getPoints(id) - amount);
+                        gameDB.addBet(gameid, id, amount, option);
+                        return new Response(ResponseType.OK, "Bet was created!");
+                    }
+                    return new Response(ResponseType.ERROR, "You do not have enough Points!");
+                }
+                return new Response(ResponseType.ERROR, "You can not bet less than 1 Point!");
             }
+            return new Response(ResponseType.ERROR, "You already made a Bet or you are the creator!");
         }
-        return false;
+        return new Response(ResponseType.ERROR, "The Bet time has ended!");
     }
 
     public boolean addGame(String id, String description, List<String> options) {

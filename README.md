@@ -38,4 +38,16 @@
          ```json
          { "status" : "OK" , "value" : "Game was created!"}
          ``` 
+    * CreateBet: \
+         example: http://localhost:8080/request?type=CreateBet&id=123456789&gameId=123456789&amount=42&option=0
+        * Required Parameter:
+            * type: "CreateBet"
+            * id: UserId that want to Bet
+            * gameId: Id of the game
+            * amount: Amount of Points
+            * option: Selected Option (Starts at 0)
+         * Response Structure:
+         ```json
+         { "status" : "OK" , "value" : "Bet was created!"}
+         ``` 
         

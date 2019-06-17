@@ -1,10 +1,6 @@
 package xyz.dommi.requests;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +15,8 @@ public class RequestManager {
     private void init(){
         requests = new ArrayList<>();
         new UserInfo(this);
+        new CreateGame(this);
+        new CreateBet(this);
     }
 
     public void addRequest(Request req){

@@ -46,6 +46,9 @@ public class BetGameDB extends DBManager {
         return (getTimeLimit(id) == null) || getTimeLimit(id).after(new Date());
     }
     public boolean isUserValid(String id, String userID){
+        if (userID.equalsIgnoreCase(getCreator(id))){
+            return false;
+        }
         BasicDBList bets = getDBListByID(id, "bets", true);
         for (int i = 0; i < bets.size(); i++) {
             BasicDBObject bet = (BasicDBObject) bets.get(i);
