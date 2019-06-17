@@ -1,4 +1,3 @@
 .idea/
-bin/.idea/
-bin/target/
 target/
+.idea/workspace.xml
