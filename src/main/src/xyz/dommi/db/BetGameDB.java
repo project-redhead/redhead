@@ -18,45 +18,51 @@ public class BetGameDB extends DBManager {
         super(db, "BetGames");
     }
 
+    public DBObject getGame(String id) {
+        return getObjectByID(id, true);
+    }
+
     public String getDescription(String id) {
-        return getStringByID(id, "description",true);
+        return getStringByID(id, "description", true);
     }
 
     public Date getDate(String id) {
-        return getDateByID(id, "date",true);
+        return getDateByID(id, "date", true);
     }
+
     public Date getTimeLimit(String id) {
-        return getDateByID(id, "timelimit",true);
+        return getDateByID(id, "timelimit", true);
     }
 
     public String getCreator(String id) {
-        return getStringByID(id, "creator",true);
+        return getStringByID(id, "creator", true);
     }
 
     public String[] getOptions(String id) {
-        return getStringArrayByID(id, "options",true);
+        return getStringArrayByID(id, "options", true);
     }
 
     public int getAnswer(String id) {
         try {
-            return getIntByID(id, "answer",true);
-        }catch (NumberFormatException e){
+            return getIntByID(id, "answer", true);
+        } catch (NumberFormatException e) {
             return -1;
         }
     }
 
-    public boolean isBetTimeValid(String id){
+    public boolean isBetTimeValid(String id) {
         return (getTimeLimit(id) == null) || getTimeLimit(id).after(new Date());
     }
-    public boolean isUserValid(String id, String userID){
-        if (userID.equalsIgnoreCase(getCreator(id))){
+
+    public boolean isUserValid(String id, String userID) {
+        if (userID.equalsIgnoreCase(getCreator(id))) {
             return false;
         }
         BasicDBList bets = getDBListByID(id, "bets", true);
         for (int i = 0; i < bets.size(); i++) {
             BasicDBObject bet = (BasicDBObject) bets.get(i);
             String user = (String) bet.get("user");
-            if(user.equalsIgnoreCase(userID)){
+            if (user.equalsIgnoreCase(userID)) {
                 return false;
             }
         }
@@ -66,7 +72,7 @@ public class BetGameDB extends DBManager {
     public BasicDBList getGames() {
         List<DBObject> list = getDBObjectListByCollection();
         BasicDBList dbList = new BasicDBList();
-        for(DBObject object : list){
+        for (DBObject object : list) {
             dbList.add(objectIDToID((BasicDBObject) object));
         }
         return dbList;
@@ -109,18 +115,19 @@ public class BetGameDB extends DBManager {
     }
 
     public double getRatebyOption(String id, int option) {
-        return (double)getAmountbyOption(id,option) / (double)getAmount(id);
-    }
-    public double getRateinOption(String id, int option, int amount) {
-        return (double)amount / (double)getAmountbyOption(id,option);
+        return (double) getAmountbyOption(id, option) / (double) getAmount(id);
     }
 
-    public int getWinAmount(String id, int option, int amount){
-        return (int)(getAmountWithoutOption(id,option) * getRateinOption(id,option,amount)) + amount;
+    public double getRateinOption(String id, int option, int amount) {
+        return (double) amount / (double) getAmountbyOption(id, option);
+    }
+
+    public int getWinAmount(String id, int option, int amount) {
+        return (int) (getAmountWithoutOption(id, option) * getRateinOption(id, option, amount)) + amount;
     }
 
     public void setAnswer(String id, int value) {
-        if(getAnswer(id) == -1) {
+        if (getAnswer(id) == -1) {
             UserDB userDB = new UserDB(db);
             BasicDBList bets = getDBListByID(id, "bets", true);
             for (int i = 0; i < bets.size(); i++) {
@@ -133,15 +140,15 @@ public class BetGameDB extends DBManager {
                 }
             }
         }
-        setValueByID(id, "answer", value,true);
+        setValueByID(id, "answer", value, true);
     }
 
     public JSONArray getBets(String id) {
-        return getJSONArrayByID(id, "bets",true);
+        return getJSONArrayByID(id, "bets", true);
     }
 
-    public BasicDBObject getBet(String id, String userID) {
-        BasicDBList bets = (BasicDBList) getObjectByID(id).get("bets");
+    public BasicDBObject getBetbyUser(String id, String userID) {
+        BasicDBList bets = (BasicDBList) getObjectByID(id, true).get("bets");
         for (int i = 0; i < bets.size(); i++) {
             BasicDBObject bet = (BasicDBObject) bets.get(i);
             String user = (String) bet.get("user");
@@ -151,16 +158,24 @@ public class BetGameDB extends DBManager {
         }
         return null;
     }
+    public BasicDBObject getBet(String id, String betId) {
+        BasicDBList bets = (BasicDBList) getObjectByID(id, true).get("bets");
+        try {
+            return (BasicDBObject) bets.get(betId);
+        }catch (Exception e){
+            return null;
+        }
+    }
 
     public int addBet(String id, String userID, int amount, int option) {
-        int _id =  getBets(id).length();
+        int _id = getBets(id).length();
         BasicDBObject bet = new BasicDBObject("_id", _id)
                 .append("user", userID)
                 .append("date", new Date())
                 .append("amount", amount)
                 .append("option", option);
 
-        pushDBObjectByID(id,"bets", bet, true);
+        pushDBObjectByID(id, "bets", bet, true);
         return _id;
     }
 

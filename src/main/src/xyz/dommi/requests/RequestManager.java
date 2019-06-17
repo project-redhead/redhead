@@ -18,6 +18,8 @@ public class RequestManager {
         new CreateGame(this);
         new CreateBet(this);
         new GameList(this);
+        new GameInfo(this);
+        new BetInfo(this);
     }
 
     public void addRequest(Request req){

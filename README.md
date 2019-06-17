@@ -57,5 +57,24 @@
          * Response Structure:
          ```json
          { "status" : "OK" , "value" : [ { "_id" : "5d07398f94c47b1c2f5ef168" , "description" : "bla" , "date" : { "$date" : "2019-06-17T06:56:15.400Z"} , "timelimit" :  null  , "creator" : "123456789" , "bets" : [ { "_id" : 0 , "user" : "987654321" , "date" : { "$date" : "2019-06-17T07:34:56.550Z"} , "amount" : 42 , "option" : 0}] , "options" : [ "yes" , "no"] , "answer" :  null }]}
+         ```   
+    * GameInfo: \
+         example: http://localhost:8080/request?type=GameInfo&id=5d07398f94c47b1c2f5ef168
+        * Required Parameter:
+            * type: "GameInfo"
+            * id: Game id
+         * Response Structure:
+         ```json
+         { "status" : "OK" , "value" : { "_id" : "5d07398f94c47b1c2f5ef168" , "description" : "bla" , "date" : { "$date" : "2019-06-17T06:56:15.400Z"} , "timelimit" :  null  , "creator" : "123456789" , "bets" : [ { "_id" : 0 , "user" : "987654321" , "date" : { "$date" : "2019-06-17T07:34:56.550Z"} , "amount" : 42 , "option" : 0}] , "options" : [ "yes" , "no"] , "answer" :  null }}
+         ```    
+    * BetInfo: \
+         example: http://localhost:8080/request?type=BetInfo&gameId=5d07398f94c47b1c2f5ef168&id=0
+        * Required Parameter:
+            * type: "BetInfo"
+            * gameId: Game id
+            * id / userId: You can get the Bet by the Id of the Bet or the UserId that created the bet
+         * Response Structure:
+         ```json
+         { "status" : "OK" , "value" :  { "_id" : 0 , "user" : "987654321" , "date" : { "$date" : "2019-06-17T07:34:56.550Z"} , "amount" : 42 , "option" : 0}}
          ``` 
         
