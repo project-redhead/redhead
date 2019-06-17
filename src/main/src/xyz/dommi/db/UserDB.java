@@ -58,15 +58,18 @@ public class UserDB extends DBManager {
         BetGameDB gameDB = new BetGameDB(db);
         if (gameDB.isBetTimeValid(gameid)) {
             if (gameDB.isUserValid(gameid, id)) {
-                if (amount > 0) {
-                    if (getPoints(id) >= amount) {
-                        setPoints(id, getPoints(id) - amount);
+                if (option >= 0 && option < gameDB.getOptions(gameid).length) {
+                    if (amount > 0) {
+                        if (getPoints(id) >= amount) {
+                            setPoints(id, getPoints(id) - amount);
 
-                        return new Response(ResponseType.OK, new BasicDBObject("_id",gameDB.addBet(gameid, id, amount, option)));
+                            return new Response(ResponseType.OK, new BasicDBObject("_id", gameDB.addBet(gameid, id, amount, option)));
+                        }
+                        return new Response(ResponseType.ERROR, "You do not have enough Points!");
                     }
-                    return new Response(ResponseType.ERROR, "You do not have enough Points!");
+                    return new Response(ResponseType.ERROR, "You can not bet less than 1 Point!");
                 }
-                return new Response(ResponseType.ERROR, "You can not bet less than 1 Point!");
+                return new Response(ResponseType.ERROR, "That option is not valid!");
             }
             return new Response(ResponseType.ERROR, "You already made a Bet or you are the creator!");
         }

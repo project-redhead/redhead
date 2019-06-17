@@ -71,7 +71,12 @@ public abstract class DBManager {
     }
 
     protected String[] getStringArrayByID(String id, String key, boolean objectID) {
-        return (String[]) getValueByID(id, key,objectID);
+        BasicDBList dblist = getDBListByID(id,key,objectID);
+        String[] list = new String[dblist.size()];
+        for(int i = 0; i < dblist.size(); i++){
+            list[i] = (String) dblist.get(i);
+        }
+        return list;
     }
 
     protected JSONObject getJSONByID(String id, String key) {
@@ -110,14 +115,18 @@ public abstract class DBManager {
     }
 
     protected void setValueByID(String id, String key, Object value) {
-        getCollection().update(new BasicDBObject("_id", id), new BasicDBObject(key, value));
+        setValueByID(id,key,value,false);
     }
 
     protected void setValueByID(String id, String key, Object value, boolean objectID) {
         if(objectID){
-            getCollection().update(new BasicDBObject("_id", new ObjectId(id)), new BasicDBObject(key, value));
+            BasicDBObject object = (BasicDBObject) getObjectByID(id,true);
+            object.replace(key,value);
+            getCollection().update(new BasicDBObject("_id", new ObjectId(id)), object);
         }else{
-            getCollection().update(new BasicDBObject("_id", id), new BasicDBObject(key, value));
+            BasicDBObject object = (BasicDBObject) getObjectByID(id);
+            object.replace(key,value);
+            getCollection().update(new BasicDBObject("_id", id), object);
         }
     }
 

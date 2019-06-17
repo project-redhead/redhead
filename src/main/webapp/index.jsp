@@ -7,6 +7,7 @@
 <input name="GameList" type="button" value="GameList" onclick="gameList()"/>
 <input name="GameInfo" type="button" value="GameInfo" onclick="gameInfo()"/>
 <input name="BetInfo" type="button" value="BetInfo" onclick="betInfo()"/>
+<input name="SetAnswer" type="button" value="SetAnswer" onclick="setAnswer()"/>
 <script>
     function requestUser() {
         var xmlHttp = new XMLHttpRequest();
@@ -22,7 +23,7 @@
     }
     function addBet() {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=CreateBet&id=125313392239050752&gameId=5d07398f94c47b1c2f5ef168&amount=42&option=0", false );
+        xmlHttp.open( "POST", "http://localhost:8080/request?type=CreateBet&id=125313392239050752&gameId=5d0766b194c4a1ba2061033b&amount=42&option=0", false );
         xmlHttp.send();
         alert(xmlHttp.responseText);
     }
@@ -34,13 +35,19 @@
     }
     function gameInfo() {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=GameInfo&id=5d07398f94c47b1c2f5ef168", false );
+        xmlHttp.open( "POST", "http://localhost:8080/request?type=GameInfo&id=5d0766b194c4a1ba2061033b", false );
         xmlHttp.send();
         alert(xmlHttp.responseText);
     }
     function betInfo() {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=BetInfo&gameId=5d07398f94c47b1c2f5ef168&id=0", false );
+        xmlHttp.open( "POST", "http://localhost:8080/request?type=BetInfo&gameId=5d0766b194c4a1ba2061033b&id=0", false );
+        xmlHttp.send();
+        alert(xmlHttp.responseText);
+    }
+    function setAnswer() {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "POST", "http://localhost:8080/request?type=SetAnswer&id=5d0766b194c4a1ba2061033b&userId=125313392239050752&value=0", false );
         xmlHttp.send();
         alert(xmlHttp.responseText);
     }

@@ -76,5 +76,16 @@
          * Response Structure:
          ```json
          { "status" : "OK" , "value" :  { "_id" : 0 , "user" : "987654321" , "date" : { "$date" : "2019-06-17T07:34:56.550Z"} , "amount" : 42 , "option" : 0}}
+         ```     
+    * SetAnswer: \
+         example: http://localhost:8080/request?type=SetAnswer&id=5d07398f94c47b1c2f5ef168&userId=125313392239050752&value=0
+        * Required Parameter:
+            * type: "SetAnswer"
+            * id: Game id
+            * userId: User that wants to set the Answer
+            * value: Index of the correct Answer (Starts at 0)
+         * Response Structure:
+         ```json
+         { "status" : "OK" , "value" :  "Answer was set!"}
          ``` 
         

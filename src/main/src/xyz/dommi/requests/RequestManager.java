@@ -20,6 +20,7 @@ public class RequestManager {
         new GameList(this);
         new GameInfo(this);
         new BetInfo(this);
+        new SetAnswer(this);
     }
 
     public void addRequest(Request req){
