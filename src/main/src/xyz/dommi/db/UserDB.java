@@ -61,8 +61,8 @@ public class UserDB extends DBManager {
                 if (amount > 0) {
                     if (getPoints(id) >= amount) {
                         setPoints(id, getPoints(id) - amount);
-                        gameDB.addBet(gameid, id, amount, option);
-                        return new Response(ResponseType.OK, "Bet was created!");
+
+                        return new Response(ResponseType.OK, new BasicDBObject("_id",gameDB.addBet(gameid, id, amount, option)));
                     }
                     return new Response(ResponseType.ERROR, "You do not have enough Points!");
                 }

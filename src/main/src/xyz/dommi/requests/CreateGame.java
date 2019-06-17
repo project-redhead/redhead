@@ -42,12 +42,10 @@ public class CreateGame extends Request {
             }
 
             if (timelimit != null && !timelimit.equals("")) {
-                gameDB.createBetGame(description, creatorId, optionList, new Date(Date.parse(timelimit)));
+                return gameDB.createBetGame(description, creatorId, optionList, new Date(Date.parse(timelimit)));
             } else {
-                gameDB.createBetGame(description, creatorId, optionList, null);
+                return gameDB.createBetGame(description, creatorId, optionList, null);
             }
-
-            return new Response(ResponseType.OK, "Game was created!");
         } catch (Exception e) {
             return new Response(ResponseType.ERROR, e.getMessage());
         }

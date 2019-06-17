@@ -172,5 +172,9 @@ public abstract class DBManager {
         setValueByID(id, key, value, objectID);
     }
 
+    protected BasicDBObject objectIDToID(BasicDBObject object) {
+        ((BasicDBObject) object).replace("_id",((ObjectId) object.get("_id")).toString());
+        return object;
+    }
 
 }

@@ -6,6 +6,8 @@ import com.mongodb.DB;
 import com.mongodb.DBObject;
 import org.bson.types.ObjectId;
 import org.json.JSONArray;
+import xyz.dommi.requests.Response;
+import xyz.dommi.requests.ResponseType;
 
 import java.util.Date;
 import java.util.List;
@@ -65,8 +67,7 @@ public class BetGameDB extends DBManager {
         List<DBObject> list = getDBObjectListByCollection();
         BasicDBList dbList = new BasicDBList();
         for(DBObject object : list){
-            ((BasicDBObject) object).replace("_id",((ObjectId) object.get("_id")).toString());
-            dbList.add(object);
+            dbList.add(objectIDToID((BasicDBObject) object));
         }
         return dbList;
     }
@@ -151,14 +152,16 @@ public class BetGameDB extends DBManager {
         return null;
     }
 
-    public void addBet(String id, String userID, int amount, int option) {
-        BasicDBObject bet = new BasicDBObject("_id", getBets(id).length())
+    public int addBet(String id, String userID, int amount, int option) {
+        int _id =  getBets(id).length();
+        BasicDBObject bet = new BasicDBObject("_id", _id)
                 .append("user", userID)
                 .append("date", new Date())
                 .append("amount", amount)
                 .append("option", option);
 
         pushDBObjectByID(id,"bets", bet, true);
+        return _id;
     }
 
     public void remBet(String id, String betid) {
@@ -167,10 +170,10 @@ public class BetGameDB extends DBManager {
 
     }
 
-    public void createBetGame(String description, String creatorId, List<String> options, Date timelimit) {
+    public Response createBetGame(String description, String creatorId, List<String> options, Date timelimit) {
         BasicDBList dbOptions = new BasicDBList();
         dbOptions.addAll(options);
-        DBObject user = new BasicDBObject()
+        DBObject object = new BasicDBObject()
                 .append("description", description)
                 .append("date", new Date())
                 .append("timelimit", timelimit)
@@ -178,6 +181,7 @@ public class BetGameDB extends DBManager {
                 .append("bets", new BasicDBList())
                 .append("options", dbOptions)
                 .append("answer", null);
-        getCollection().insert(user);
+        getCollection().insert(object);
+        return new Response(ResponseType.OK, new BasicDBObject("_id", objectIDToID((BasicDBObject) object).get("_id")));
     }
 }

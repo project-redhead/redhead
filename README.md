@@ -36,7 +36,7 @@
             * timelimit: Voting Timelimit for the game.
          * Response Structure:
          ```json
-         { "status" : "OK" , "value" : "Game was created!"}
+         { "status" : "OK" , "value" : { "_id" : "123456789abcd"}}
          ``` 
     * CreateBet: \
          example: http://localhost:8080/request?type=CreateBet&id=123456789&gameId=123456789&amount=42&option=0
@@ -48,7 +48,7 @@
             * option: Selected Option (Starts at 0)
          * Response Structure:
          ```json
-         { "status" : "OK" , "value" : "Bet was created!"}
+         { "status" : "OK" , "value" : { "_id" : 1}}
          ```  
     * GameList: \
          example: http://localhost:8080/request?type=GameList
