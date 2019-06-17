@@ -17,6 +17,7 @@ public class RequestManager {
         new UserInfo(this);
         new CreateGame(this);
         new CreateBet(this);
+        new GameList(this);
     }
 
     public void addRequest(Request req){

@@ -4,6 +4,7 @@ import com.mongodb.BasicDBList;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBObject;
+import org.bson.types.ObjectId;
 import org.json.JSONArray;
 
 import java.util.Date;
@@ -60,8 +61,14 @@ public class BetGameDB extends DBManager {
         return true;
     }
 
-    public JSONArray getGames() {
-        return getJSONArrayByCollection();
+    public BasicDBList getGames() {
+        List<DBObject> list = getDBObjectListByCollection();
+        BasicDBList dbList = new BasicDBList();
+        for(DBObject object : list){
+            ((BasicDBObject) object).replace("_id",((ObjectId) object.get("_id")).toString());
+            dbList.add(object);
+        }
+        return dbList;
     }
 
     public int getAmountbyOption(String id, int option) {

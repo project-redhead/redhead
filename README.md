@@ -49,5 +49,13 @@
          * Response Structure:
          ```json
          { "status" : "OK" , "value" : "Bet was created!"}
+         ```  
+    * GameList: \
+         example: http://localhost:8080/request?type=GameList
+        * Required Parameter:
+            * type: "GameList"
+         * Response Structure:
+         ```json
+         { "status" : "OK" , "value" : [ { "_id" : "5d07398f94c47b1c2f5ef168" , "description" : "bla" , "date" : { "$date" : "2019-06-17T06:56:15.400Z"} , "timelimit" :  null  , "creator" : "123456789" , "bets" : [ { "_id" : 0 , "user" : "987654321" , "date" : { "$date" : "2019-06-17T07:34:56.550Z"} , "amount" : 42 , "option" : 0}] , "options" : [ "yes" , "no"] , "answer" :  null }]}
          ``` 
         
