@@ -1,88 +1,101 @@
 package xyz.dommi.db;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBObject;
+import xyz.dommi.requests.Response;
+import xyz.dommi.requests.ResponseType;
 
-public class UserDB extends DBManager{
+import java.util.List;
 
-    public UserDB(Connection con) {
-        super(con, "Users");
-    }
+public class UserDB extends DBManager {
 
-    public String getName(String id){
-        return getString("id", id,"name");
-    }
-    public String getEmail(String id){
-        return getString("id", id,"email");
-    }
-    public String getRoleID(String id){
-        return getString("id", id,"roleid");
-    }
-    public int getPoints(String id){
-        return getInt("id", id,"points");
+    public UserDB(DB db) {
+        super(db, "Users");
     }
 
-    public void setName(String id, String name){
-        update("id", id,"name",name);
-    }
-    public void setEmail(String id, String email){
-        update("id", id,"email",email);
-    }
-    public void setRoleID(String id, String roleID){
-        update("id", id,"roleid",roleID);
-    }
-    public void setPoints(String id, int points){
-        update("id", id,"points",""+points);
+    public DBObject getUser(String id) {
+        return getObjectByID(id);
     }
 
+    public String getName(String id) {
+        return getStringByID(id, "name");
+    }
 
+    public String getEmail(String id) {
+        return getStringByID(id, "email");
+    }
 
-    public boolean userExists(String id){
-        try {
-            Statement statement = con.createStatement();
-            String valueStr = "";
-            ResultSet rs = statement.executeQuery("select id from " + tablename);
-            while (rs.next()){
-                if(rs.getString("id").equalsIgnoreCase(id)){
-                    return true;
+    public String getRoleID(String id) {
+        return getStringByID(id, "roleID");
+    }
+
+    public int getPoints(String id) {
+        return getIntByID(id, "points");
+    }
+
+    public List<DBObject> getUsers() {
+        return getDBObjectListByCollection();
+    }
+
+    public void setName(String id, String name) {
+        setStringByID(id, "name", name);
+    }
+
+    public void setEmail(String id, String email) {
+        setStringByID(id, "email", email);
+    }
+
+    public void setRoleID(String id, String roleID) {
+        setStringByID(id, "roleID", roleID);
+    }
+
+    public void setPoints(String id, int points) {
+        setIntByID(id, "points", points);
+    }
+
+    public Response addBet(String id, String gameid, int amount, int option) {
+        BetGameDB gameDB = new BetGameDB(db);
+        if (gameDB.isBetTimeValid(gameid)) {
+            if (gameDB.isUserValid(gameid, id)) {
+                if (option >= 0 && option < gameDB.getOptions(gameid).length) {
+                    if (amount > 0) {
+                        if (getPoints(id) >= amount) {
+                            setPoints(id, getPoints(id) - amount);
+
+                            return new Response(ResponseType.OK, new BasicDBObject("_id", gameDB.addBet(gameid, id, amount, option)));
+                        }
+                        return new Response(ResponseType.ERROR, "You do not have enough Points!");
+                    }
+                    return new Response(ResponseType.ERROR, "You can not bet less than 1 Point!");
                 }
+                return new Response(ResponseType.ERROR, "That option is not valid!");
             }
-            return false;
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-            return false;
+            return new Response(ResponseType.ERROR, "You already made a Bet or you are the creator!");
         }
+        return new Response(ResponseType.ERROR, "The Bet time has ended!");
     }
 
-    public void createUser(String id,String name, String email) {
-        if(!userExists(id)){
-            String[] keys = {"id","name","email","points","roleid"};
-            String[] values = {id,name,email,"0","0"};
-            insert(keys,values);
-        }
-
+    public boolean addGame(String id, String description, List<String> options) {
+        BetGameDB gameDB = new BetGameDB(db);
+        gameDB.createBetGame(description, id, options, null);
+        return true;
     }
 
-    @Override
-    protected void init() {
-        try {
-            Statement stmt = con.createStatement();
-            System.out.println("Init Table : " + tablename + "..");
-            String strUpdate = "CREATE TABLE IF NOT EXISTS " + tablename +
-                    "(`id` varchar(18) not null , " +
-                    "`name` varchar(45) not null, " +
-                    "`email` varchar(45) not null, " +
-                    "`points` int not null, " +
-                    "`roleid` varchar(18) not null, " +
-                    "PRIMARY KEY (`id`));";
+    public boolean userExists(String id) {
+        return getObjectByID(id) != null;
+    }
 
-            stmt.executeUpdate(strUpdate);
-            System.out.println("Init Table : " + tablename + " finished");
-        } catch (SQLException ex) {
-            ex.printStackTrace();
+    public void createUser(String id, String name, String email) {
+        if (!userExists(id)) {
+            DBObject user = new BasicDBObject("_id", id)
+                    .append("name", name)
+                    .append("email", email)
+                    .append("points", 0)
+                    .append("roleid", "user");
+            getCollection().insert(user);
         }
+
     }
 
 }
