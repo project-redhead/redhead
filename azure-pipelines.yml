@@ -5,12 +5,14 @@
 
 trigger:
 - master
+- dev
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
 - task: Maven@3
+  displayName: 'Run Maven'
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
@@ -20,3 +22,9 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifact'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/target'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
