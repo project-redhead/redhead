@@ -7,24 +7,34 @@ trigger:
 - master
 - dev
 
-pool:
-  vmImage: 'ubuntu-latest'
+jobs:
+- job: 'Build with Maven'
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - task: Maven@3
+    displayName: 'Run Maven'
+    inputs:
+      mavenPomFile: 'pom.xml'
+      mavenOptions: '-Xmx3072m'
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: '1.8'
+      jdkArchitectureOption: 'x64'
+      publishJUnitResults: false
+      testResultsFiles: '**/surefire-reports/TEST-*.xml'
+      goals: 'package'
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish artifact'
+    inputs:
+      PathtoPublish: 'target'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
 
-steps:
-- task: Maven@3
-  displayName: 'Run Maven'
-  inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: false
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish artifact'
-  inputs:
-    PathtoPublish: 'target'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+- job: 'Build Docker Image'
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - task: Docker@2
+    displayName: 'docker build'
+    inputs:
+      command: build
