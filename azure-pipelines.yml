@@ -8,9 +8,12 @@ trigger:
 - dev
 
 jobs:
-- job: 'Build with Maven'
+- job: BuildMaven
+  displayName: 'Build with Maven'
+
   pool:
     vmImage: 'ubuntu-latest'
+
   steps:
   - task: Maven@3
     displayName: 'Run Maven'
@@ -30,9 +33,13 @@ jobs:
       ArtifactName: 'drop'
       publishLocation: 'Container'
 
-- job: 'Build Docker Image'
+
+- job: BuildDocker
+  displayName: 'Build with Docker'
+
   pool:
     vmImage: 'ubuntu-latest'
+
   steps:
   - task: Docker@2
     displayName: 'docker build'
