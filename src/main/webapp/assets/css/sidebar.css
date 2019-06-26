@@ -1,0 +1,53 @@
+@import 'fonts.css';
+
+div.rh-sidebar {
+    height: 100vh;
+    width: 80px;
+    background-color: #d31a1a;
+    box-shadow: 6px 0 12px #000 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+div.rh-sidebar .rh-sidebar-top {
+    background-color: #fff;
+    height: 80px;
+}
+
+div.rh-sidebar div.rh-sidebar-action-item {
+    cursor: pointer;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+div.rh-sidebar div.rh-sidebar-action-item:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+div.rh-sidebar div.rh-sidebar-action-item i.rh-icon {
+    color: #9c0a0a;
+    font-size: 2em;
+}
+
+div.rh-sidebar div.rh-sidebar-action-item span.border {
+    background-color: #fff;
+    width: 4px;
+    height: 45px;
+    position: absolute;
+    left: 8px;
+    opacity: 0;
+    border-radius: 0px 4px 4px 0px;
+}
+
+div.rh-sidebar div.rh-sidebar-action-item.active i.rh-icon {
+    color: #fff;
+}
+
+div.rh-sidebar div.rh-sidebar-action-item.active span.border {
+    opacity: 1;
+}
