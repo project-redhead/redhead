@@ -11,7 +11,7 @@
 <script>
     function requestUser() {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=UserInfo&id=125313392239050752", false );
+        xmlHttp.open( "POST", "http://localhost:8080/request?type=UserInfo&id=312279086690992128", false );
         xmlHttp.send();
         alert(xmlHttp.responseText);
     }
@@ -23,7 +23,7 @@
     }
     function addBet() {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=CreateBet&id=125313392239050752&gameId=5d0766b194c4a1ba2061033b&amount=42&option=0", false );
+        xmlHttp.open( "POST", "http://localhost:8080/request?type=CreateBet&id=125313392239050752&gameId=5d138fad165c1429886120f1&amount=42&option=0", false );
         xmlHttp.send();
         alert(xmlHttp.responseText);
     }

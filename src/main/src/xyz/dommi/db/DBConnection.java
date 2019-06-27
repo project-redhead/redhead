@@ -17,7 +17,7 @@ public class DBConnection {
         if(db == null){
             try {
                 System.out.println("Connecting..");
-                MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://localhost:27017"));
+                MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://redhead.ginomessmer.me:27017"));
                 db = mongoClient.getDB("admin");
                 System.out.println("Connected");
                 return db;
