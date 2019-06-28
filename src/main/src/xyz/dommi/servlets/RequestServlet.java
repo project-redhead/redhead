@@ -14,7 +14,12 @@ public class RequestServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String redirect = (String) request.getParameter("redirect");
         new RequestManager().handleRequest(request,response);
+        System.out.println(redirect);
+        if(redirect != null && !redirect.equals("")){
+            request.getServletContext().getRequestDispatcher(redirect).forward(request,response);
+        }
 
     }
 
