@@ -23,6 +23,8 @@ public class RequestManager {
 
     private void init(){
         jsonRequests = new ArrayList<>();
+        beanRequests = new ArrayList<>();
+
         new UserInfo(this);
         new CreateGame(this);
         new CreateBet(this);
@@ -58,9 +60,13 @@ public class RequestManager {
 
     private RequestFormat getFormat(HttpServletRequest request){
         String format = request.getParameter("format");
+        if(format == null ){
+            return  RequestFormat.JSON;
+        }
         if(format.equalsIgnoreCase("bean")){
             return  RequestFormat.BEAN;
         }
+
         return  RequestFormat.JSON;
     }
 

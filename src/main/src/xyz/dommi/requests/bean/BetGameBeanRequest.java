@@ -1,6 +1,7 @@
 package xyz.dommi.requests.bean;
 
 import xyz.dommi.beans.BetGameBean;
+import xyz.dommi.common.HttpUtils;
 import xyz.dommi.requests.RequestManager;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +16,7 @@ public class BetGameBeanRequest extends BeanRequest {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) {
         String id = request.getParameter("id");
-        String userId = request.getParameter("userId");
+        String userId = HttpUtils.getUserIdFromJwt(request);
 
         request.setAttribute("bean", new BetGameBean(id, userId));
     }

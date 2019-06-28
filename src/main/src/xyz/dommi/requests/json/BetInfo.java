@@ -2,6 +2,7 @@ package xyz.dommi.requests.json;
 
 import com.mongodb.DB;
 import com.mongodb.DBObject;
+import xyz.dommi.common.HttpUtils;
 import xyz.dommi.db.BetGameDB;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.requests.RequestManager;
@@ -18,12 +19,11 @@ public class BetInfo extends JsonRequest {
 
     public Response handleRequest(HttpServletRequest request) {
         String id = request.getParameter("id");
-        String userId = request.getParameter("userId");
+        String userId = HttpUtils.getUserIdFromJwt(request);
         String gameId = request.getParameter("gameId");
 
         if (gameId != null && !gameId.equals("")) {
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             BetGameDB gameDB = new BetGameDB(db);
             DBObject bet = null;
 

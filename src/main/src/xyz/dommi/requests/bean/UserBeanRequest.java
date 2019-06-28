@@ -1,6 +1,7 @@
 package xyz.dommi.requests.bean;
 
 import xyz.dommi.beans.UserBean;
+import xyz.dommi.common.HttpUtils;
 import xyz.dommi.requests.RequestManager;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +15,7 @@ public class UserBeanRequest extends  BeanRequest{
 
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) {
-        String id = request.getParameter("id");
+        String id = HttpUtils.getUserIdFromJwt(request);
 
         if(id != null && !id.equals("")){
             request.setAttribute("bean", new UserBean(id));

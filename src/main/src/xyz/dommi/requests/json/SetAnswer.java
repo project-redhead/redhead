@@ -1,6 +1,7 @@
 package xyz.dommi.requests.json;
 
 import com.mongodb.DB;
+import xyz.dommi.common.HttpUtils;
 import xyz.dommi.db.BetGameDB;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.requests.RequestManager;
@@ -17,7 +18,7 @@ public class SetAnswer extends JsonRequest {
 
     public Response handleRequest(HttpServletRequest request) {
         String id = request.getParameter("id");
-        String userId = request.getParameter("userId");
+        String userId = HttpUtils.getUserIdFromJwt(request);
         String value = request.getParameter("value");
 
         if (userId != null && !userId.equals("")) {
@@ -29,8 +30,8 @@ public class SetAnswer extends JsonRequest {
                 return new Response(ResponseType.ERROR, "Value not valid!");
             }
 
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+
+            DB db = DBConnection.getInstance().connect();
             BetGameDB gameDB = new BetGameDB(db);
             return gameDB.setAnswer(id,userId,ivalue);
 

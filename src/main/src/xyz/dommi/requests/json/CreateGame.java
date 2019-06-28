@@ -1,6 +1,7 @@
 package xyz.dommi.requests.json;
 
 import com.mongodb.DB;
+import xyz.dommi.common.HttpUtils;
 import xyz.dommi.db.BetGameDB;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.requests.RequestManager;
@@ -20,7 +21,7 @@ public class CreateGame extends JsonRequest {
 
     public Response handleRequest(HttpServletRequest request) {
         String description = request.getParameter("description");
-        String creatorId = request.getParameter("creatorId");
+        String creatorId = HttpUtils.getUserIdFromJwt(request);
         String options = request.getParameter("options");
         String timelimit = request.getParameter("timelimit");
 
@@ -34,8 +35,7 @@ public class CreateGame extends JsonRequest {
             return new Response(ResponseType.ERROR, "Options cannot be empty!");
         }
         try {
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             BetGameDB gameDB = new BetGameDB(db);
 
             List<String> optionList = new ArrayList<>();

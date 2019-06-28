@@ -1,6 +1,7 @@
 package xyz.dommi.requests.json;
 
 import com.mongodb.DB;
+import xyz.dommi.common.HttpUtils;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.db.UserDB;
 import xyz.dommi.requests.RequestManager;
@@ -15,11 +16,12 @@ public class UserInfo extends JsonRequest {
         super("UserInfo", manager);
     }
     public Response handleRequest(HttpServletRequest request){
-        String id = request.getParameter("id");
+        String id = HttpUtils.getUserIdFromJwt(request);
+        System.out.println(id);
 
         if(id != null && !id.equals("")){
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+
+            DB db = DBConnection.getInstance().connect();
             UserDB userDB = new UserDB(db);
 
             return new Response(ResponseType.OK, userDB.getUser(id));
