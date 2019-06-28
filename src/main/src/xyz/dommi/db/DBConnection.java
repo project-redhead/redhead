@@ -9,6 +9,7 @@ import xyz.dommi.common.EnvironmentConfig;
 
 public class DBConnection {
     private DB db;
+    private static DBConnection instance;
 
     public DBConnection() {
 
@@ -29,5 +30,12 @@ public class DBConnection {
         return db;
     }
 
+    public static DBConnection getInstance(){
+        if(instance == null){
+            instance = new DBConnection();
+        }
+
+        return  instance;
+    }
 
 }

@@ -48,8 +48,7 @@ public class LoginSuccessServlet extends HttpServlet {
         response.addCookie(new Cookie(HttpUtils.TOKEN_COOKIE_NAME, jwt));
 
         // Establish DB connection and add user
-        DBConnection dbConnection = new DBConnection();
-        DB db = dbConnection.connect();
+        DB db = DBConnection.getInstance().connect();
         UserDB userDB = new UserDB(db);
         userDB.createUser(user.getId(), user.getUsername(), user.getEmail());
         UserBean userBean = new UserBean(user.getId());

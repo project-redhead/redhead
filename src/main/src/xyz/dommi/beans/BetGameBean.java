@@ -19,8 +19,7 @@ public class BetGameBean {
         this.id = id;
         this.userId = userId;
         if((id != null && !id.equals(""))){
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             BetGameDB gameDB = new BetGameDB(db);
             this.answer = gameDB.getAnswer(id);
         }
@@ -28,8 +27,7 @@ public class BetGameBean {
 
     public String getInfo(){
         if(id != null && !id.equals("")){
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             BetGameDB gameDB = new BetGameDB(db);
             DBObject game = gameDB.getGame(id);
             if(game != null){
@@ -40,8 +38,7 @@ public class BetGameBean {
     }
 
     public String getGamelist(){
-        DBConnection dbConnection = new DBConnection();
-        DB db = dbConnection.connect();
+        DB db = DBConnection.getInstance().connect();
         BetGameDB gameDB = new BetGameDB(db);
 
         return new Response(ResponseType.OK, gameDB.getGames()).toString();
@@ -61,8 +58,7 @@ public class BetGameBean {
 
     public void setAnswer(int answer) {
         this.answer = answer;
-        DBConnection dbConnection = new DBConnection();
-        DB db = dbConnection.connect();
+        DB db = DBConnection.getInstance().connect();
         BetGameDB gameDB = new BetGameDB(db);
         gameDB.setAnswer(id,userId,answer);
 

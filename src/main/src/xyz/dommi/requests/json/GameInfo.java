@@ -21,8 +21,7 @@ public class GameInfo extends JsonRequest {
         String id = request.getParameter("id");
 
         if(id != null && !id.equals("")){
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             BetGameDB gameDB = new BetGameDB(db);
             DBObject game = gameDB.getGame(id);
             if(game != null){

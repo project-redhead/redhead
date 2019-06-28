@@ -11,7 +11,7 @@
 <script>
     function requestUser() {
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=UserInfo&id=312279086690992128", false );
+        xmlHttp.open( "POST", "http://localhost:8080/request?type=UserInfo&id=125313392239050752", false );
         xmlHttp.send();
         alert(xmlHttp.responseText);
     }

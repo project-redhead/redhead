@@ -17,8 +17,7 @@ public class UserBean {
     public UserBean(String id){
         setId(id);
         if(getId() != null && !getId().equalsIgnoreCase("")){
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             UserDB userDB = new UserDB(db);
             name = userDB.getName(id);
             email = userDB.getEmail(id);
@@ -34,8 +33,7 @@ public class UserBean {
     public void setName(String name) {
         this.name = name;
         if(getId() != null && !getId().equalsIgnoreCase("")){
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             UserDB userDB = new UserDB(db);
             userDB.setName(getId(),name);
         }
@@ -44,8 +42,7 @@ public class UserBean {
     public void setEmail(String email) {
         this.email = email;
         if(getId() != null && !getId().equalsIgnoreCase("")){
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             UserDB userDB = new UserDB(db);
             userDB.setEmail(getId(),email);
         }
@@ -54,8 +51,7 @@ public class UserBean {
     public void setPoints(int points) {
         this.points = points;
         if(getId() != null && !getId().equalsIgnoreCase("")){
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             UserDB userDB = new UserDB(db);
             userDB.setPoints(getId(),points);
         }
@@ -64,8 +60,7 @@ public class UserBean {
     public void setRole(String role) {
         this.role = role;
         if(getId() != null && !getId().equalsIgnoreCase("")){
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             UserDB userDB = new UserDB(db);
             userDB.setRoleID(getId(),role);
         }

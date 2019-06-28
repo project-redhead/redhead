@@ -15,8 +15,7 @@ public class GameList extends JsonRequest {
         super("GameList", manager);
     }
     public Response handleRequest(HttpServletRequest request){
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             BetGameDB gameDB = new BetGameDB(db);
 
             return new Response(ResponseType.OK, gameDB.getGames());

@@ -18,9 +18,7 @@ public class BetBean {
     }
 
     public String getInfo(){
-
-        DBConnection dbConnection = new DBConnection();
-        DB db = dbConnection.connect();
+        DB db = DBConnection.getInstance().connect();
         BetGameDB gameDB = new BetGameDB(db);
         DBObject bet = gameDB.getBet(gameID, betID);
 

@@ -1,6 +1,7 @@
 package xyz.dommi.requests.json;
 
 import com.mongodb.DB;
+import xyz.dommi.common.HttpUtils;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.db.UserDB;
 import xyz.dommi.requests.RequestManager;
@@ -16,7 +17,7 @@ public class CreateBet extends JsonRequest {
     }
 
     public Response handleRequest(HttpServletRequest request) {
-        String id = request.getParameter("id");
+        String id = HttpUtils.getUserIdFromJwt(request);
         String gameId = request.getParameter("gameId");
         String amount = request.getParameter("amount");
         String option = request.getParameter("option");
@@ -30,8 +31,7 @@ public class CreateBet extends JsonRequest {
         try {
             int iamount = Integer.valueOf(amount);
             int ioption = Integer.valueOf(option);
-            DBConnection dbConnection = new DBConnection();
-            DB db = dbConnection.connect();
+            DB db = DBConnection.getInstance().connect();
             UserDB userDB = new UserDB(db);
             return userDB.addBet(id,gameId,iamount,ioption);
         } catch (Exception e) {
