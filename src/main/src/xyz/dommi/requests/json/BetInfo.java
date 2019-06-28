@@ -1,15 +1,16 @@
-package xyz.dommi.requests;
+package xyz.dommi.requests.json;
 
-import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBObject;
 import xyz.dommi.db.BetGameDB;
 import xyz.dommi.db.DBConnection;
-import xyz.dommi.db.DBManager;
+import xyz.dommi.requests.RequestManager;
+import xyz.dommi.requests.Response;
+import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class BetInfo extends Request {
+public class BetInfo extends JsonRequest {
 
     public BetInfo(RequestManager manager) {
         super("BetInfo", manager);
