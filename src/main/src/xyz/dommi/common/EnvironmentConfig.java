@@ -30,4 +30,13 @@ public class EnvironmentConfig {
                 System.getenv("OAUTH_DISCORD_SECRET")
         );
     }
+
+    public static String getSecretKey() {
+        String key = System.getenv("SECRET_KEY");
+
+        if (key == "" || key == null)
+            return "mysuperdupersecretkey!123";
+        else
+            return key;
+    }
 }
