@@ -5,6 +5,7 @@ import java.net.UnknownHostException;
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import xyz.dommi.common.EnvironmentConfig;
 
 public class DBConnection {
     private DB db;
@@ -17,7 +18,7 @@ public class DBConnection {
         if(db == null){
             try {
                 System.out.println("Connecting..");
-                MongoClient mongoClient = new MongoClient(new MongoClientURI("mongodb://redhead.ginomessmer.me:27017"));
+                MongoClient mongoClient = new MongoClient(new MongoClientURI(EnvironmentConfig.getDatabaseConnectionString()));
                 db = mongoClient.getDB("admin");
                 System.out.println("Connected");
                 return db;
