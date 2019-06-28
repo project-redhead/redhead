@@ -1,6 +1,7 @@
 package xyz.dommi.requests;
 
 import com.mongodb.DB;
+import xyz.dommi.common.HttpUtils;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.db.UserDB;
 
@@ -12,7 +13,7 @@ public class UserInfo extends Request{
         super("UserInfo", manager);
     }
     public Response handleRequest(HttpServletRequest request){
-        String id = request.getParameter("id");
+        String id = HttpUtils.getUserIdFromJwt(request);
 
         if(id != null && !id.equals("")){
             DBConnection dbConnection = new DBConnection();

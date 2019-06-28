@@ -1,6 +1,7 @@
 package xyz.dommi.servlets;
 
 import xyz.dommi.beans.UserBean;
+import xyz.dommi.common.HttpUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +13,7 @@ import java.io.IOException;
 @WebServlet(name = "UserServlet",value = "/userinfo")
 public class UserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String id = request.getParameter("id");
+        String id = HttpUtils.getUserIdFromJwt(request);
         request.setAttribute("result", new UserBean(id));
     }
 

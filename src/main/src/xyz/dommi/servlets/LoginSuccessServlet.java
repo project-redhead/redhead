@@ -7,6 +7,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.mongodb.DB;
 import xyz.dommi.beans.UserBean;
 import xyz.dommi.common.EnvironmentConfig;
+import xyz.dommi.common.HttpUtils;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.db.UserDB;
 
@@ -44,7 +45,7 @@ public class LoginSuccessServlet extends HttpServlet {
                 .withSubject(user.getId())
                 .sign(algorithm);
 
-        response.addCookie(new Cookie("token", jwt));
+        response.addCookie(new Cookie(HttpUtils.TOKEN_COOKIE_NAME, jwt));
 
         // Establish DB connection and add user
         DBConnection dbConnection = new DBConnection();
