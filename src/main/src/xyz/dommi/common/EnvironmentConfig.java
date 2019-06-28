@@ -8,7 +8,7 @@ public class EnvironmentConfig {
         private String redirectUrl;
 
         public DiscordConfig(String clientId, String clientSecret) {
-            this(clientId, clientSecret, "http://localhost:8080/finishedlogin");
+            this(clientId, clientSecret, null);
         }
 
         public DiscordConfig(String clientId, String clientSecret, String redirectUrl) {
@@ -26,7 +26,11 @@ public class EnvironmentConfig {
         }
 
         public String getRedirectUrl() {
-            // TODO: Add default value in here
+            if (redirectUrl == null || redirectUrl == "") {
+                // Return default value
+                return "http://localhost:8080/finishedlogin";
+            }
+
             return redirectUrl;
         }
     }
@@ -39,8 +43,7 @@ public class EnvironmentConfig {
         return new DiscordConfig(
                 System.getenv("OAUTH_DISCORD_ID"),
                 System.getenv("OAUTH_DISCORD_SECRET"),
-                System.getenv("OAUTH_DISCORD_REDIRECT") != ""
-                        ? System.getenv("OAUTH_DISCORD_REDIRECT") : "http://localhost:8080/finishedlogin");
+                System.getenv("OAUTH_DISCORD_REDIRECT"));
     }
 
     public static String getSecretKey() {
