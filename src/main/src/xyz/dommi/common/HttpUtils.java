@@ -15,7 +15,7 @@ public class HttpUtils {
 
     public static String getUserIdFromJwt(HttpServletRequest request) {
         Optional<Cookie> cookie = Arrays.stream(request.getCookies())
-                .filter(c -> c.getName() == TOKEN_COOKIE_NAME)
+                .filter(c -> c.getName().equalsIgnoreCase(TOKEN_COOKIE_NAME))
                 .findFirst();
 
         if(!cookie.isPresent())
