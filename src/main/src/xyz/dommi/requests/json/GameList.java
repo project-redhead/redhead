@@ -1,12 +1,15 @@
-package xyz.dommi.requests;
+package xyz.dommi.requests.json;
 
 import com.mongodb.DB;
 import xyz.dommi.db.BetGameDB;
 import xyz.dommi.db.DBConnection;
+import xyz.dommi.requests.RequestManager;
+import xyz.dommi.requests.Response;
+import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class GameList extends Request{
+public class GameList extends JsonRequest {
 
     public GameList(RequestManager manager){
         super("GameList", manager);
