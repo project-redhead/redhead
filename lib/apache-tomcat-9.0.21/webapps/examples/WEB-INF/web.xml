@@ -82,7 +82,7 @@
 
 <!--
     <filter-mapping>
-        <filter-name>Request Dumper Filter</filter-name>
+        <filter-name>JsonRequest Dumper Filter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 -->

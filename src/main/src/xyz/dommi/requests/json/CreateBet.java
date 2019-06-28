@@ -1,12 +1,15 @@
-package xyz.dommi.requests;
+package xyz.dommi.requests.json;
 
 import com.mongodb.DB;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.db.UserDB;
+import xyz.dommi.requests.RequestManager;
+import xyz.dommi.requests.Response;
+import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class CreateBet extends Request {
+public class CreateBet extends JsonRequest {
 
     public CreateBet(RequestManager manager){
         super("CreateBet", manager);

@@ -14,7 +14,7 @@ public class RequestServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        response.getWriter().append(new RequestManager().handleRequest(request).toString());
+        new RequestManager().handleRequest(request,response);
 
     }
 
