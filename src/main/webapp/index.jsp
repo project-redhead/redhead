@@ -34,6 +34,7 @@
         </div>
     </div>
 
+    <script src="/assets/js/common/http-service.js"></script>
     <script src="/assets/js/index.js"></script>
 </body>
 </html>
