@@ -1,56 +1,39 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: GinoMessmer
+  Date: 01/07/2019
+  Time: 20:24
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<head>
+    <title>Project Redhead</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/_redhead.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
 <body>
-<h2>Examples:</h2>
-<input name="Userinfo" type="button" value="Userinfo" onclick="requestUser()"/>
-<input name="AddGame" type="button" value="AddGame" onclick="addGame()"/>
-<input name="AddBet" type="button" value="AddBet" onclick="addBet()"/>
-<input name="GameList" type="button" value="GameList" onclick="gameList()"/>
-<input name="GameInfo" type="button" value="GameInfo" onclick="gameInfo()"/>
-<input name="BetInfo" type="button" value="BetInfo" onclick="betInfo()"/>
-<input name="SetAnswer" type="button" value="SetAnswer" onclick="setAnswer()"/>
-<script>
-    function requestUser() {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=UserInfo&id=125313392239050752", false );
-        xmlHttp.send();
-        alert(xmlHttp.responseText);
-    }
-    function addGame() {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=CreateGame&creatorId=125313392239050752&description=bla&options=yes,no", false );
-        xmlHttp.send();
-        alert(xmlHttp.responseText);
-    }
-    function addBet() {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=CreateBet&id=125313392239050752&gameId=5d0766b194c4a1ba2061033b&amount=42&option=0", false );
-        xmlHttp.send();
-        alert(xmlHttp.responseText);
-    }
-    function gameList() {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=GameList", false );
-        xmlHttp.send();
-        alert(xmlHttp.responseText);
-    }
-    function gameInfo() {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=GameInfo&id=5d0766b194c4a1ba2061033b", false );
-        xmlHttp.send();
-        alert(xmlHttp.responseText);
-    }
-    function betInfo() {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=BetInfo&gameId=5d0766b194c4a1ba2061033b&id=0", false );
-        xmlHttp.send();
-        alert(xmlHttp.responseText);
-    }
-    function setAnswer() {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "POST", "http://localhost:8080/request?type=SetAnswer&id=5d0766b194c4a1ba2061033b&userId=125313392239050752&value=0", false );
-        xmlHttp.send();
-        alert(xmlHttp.responseText);
-    }
-</script>
+    <div>
+        <div class="rh-widget">
+            <div class="rh-widget-header">
+                Wetten
+            </div>
+            <div class="rh-widget-content">
+                Lädt...
+            </div>
+        </div>
+
+        <div class="rh-widget">
+            <div class="rh-widget-header">
+                Kummerkasten
+            </div>
+            <div class="rh-widget-content">
+                <input type="text" id="inputFeedback" />
+                <a class="rh-button" href="#" onclick="submitFeedback(this)">Absenden</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/index.js"></script>
 </body>
 </html>
