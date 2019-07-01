@@ -1,6 +1,7 @@
 package xyz.dommi.servlets;
 
 import bell.oauth.discord.main.OAuthBuilder;
+import xyz.dommi.common.EnvironmentConfig;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,9 +13,11 @@ import java.io.IOException;
 @WebServlet(value = "/login",name = "Login")
 public class LoginServlet extends HttpServlet {
 
-    public static OAuthBuilder builder = new OAuthBuilder("581003934773280774", "AYswEcKgwqFagEdSM9vJDYZK6uxxhdvN")
-            .setScopes(new String[]{"identify","email"})
-            .setRedirectURI("http://localhost:8080/finishedlogin");
+    public static OAuthBuilder builder = new OAuthBuilder(
+            EnvironmentConfig.getDiscordConfig().getClientId(),
+            EnvironmentConfig.getDiscordConfig().getClientSecret())
+                .setScopes(new String[]{"identify","email"})
+                .setRedirectURI(EnvironmentConfig.getDiscordConfig().getRedirectUrl());
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.getWriter().append("Hello World from Post");
