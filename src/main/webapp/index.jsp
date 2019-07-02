@@ -14,6 +14,9 @@
 </head>
 <body>
     <div>
+        <div>
+            <h3 rh-js="username"></h3>
+        </div>
         <div class="rh-widget">
             <div class="rh-widget-header">
                 Wetten
@@ -30,6 +33,7 @@
             <div class="rh-widget-content">
                 <input type="text" id="inputFeedback" />
                 <a class="rh-button" href="#" onclick="submitFeedback(this)">Absenden</a>
+                <a class="rh-button" href="#">Meine Einsendungen</a>
             </div>
         </div>
     </div>
