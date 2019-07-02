@@ -168,6 +168,12 @@ public abstract class DBManager {
     protected void setStringByID(String id, String key, String value) {
         setValueByID(id, key, value);
     }
+    protected void setBooleanByID(String id, String key, boolean value) {
+        setValueByID(id, key, value);
+    }
+    protected void setBooleanByID(String id, String key, boolean value, boolean objectID) {
+        setValueByID(id, key, value, objectID);
+    }
 
     protected void setStringByID(String id, String key, String value, boolean objectID) {
         setValueByID(id, key, value, objectID);

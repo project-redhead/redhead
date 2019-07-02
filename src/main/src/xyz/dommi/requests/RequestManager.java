@@ -31,6 +31,7 @@ public class RequestManager {
         new SetAnswer(this);
         new SuggestionInfo(this);
         new CreateSuggestion(this);
+        new SetSuggestionRead(this);
 
         new BetBeanRequest(this);
         new BetGameBeanRequest(this);
