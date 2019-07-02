@@ -1,9 +1,6 @@
 package xyz.dommi.requests;
 
-import xyz.dommi.requests.bean.BeanRequest;
-import xyz.dommi.requests.bean.BetBeanRequest;
-import xyz.dommi.requests.bean.BetGameBeanRequest;
-import xyz.dommi.requests.bean.UserBeanRequest;
+import xyz.dommi.requests.bean.*;
 import xyz.dommi.requests.json.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -36,6 +33,7 @@ public class RequestManager {
         new BetBeanRequest(this);
         new BetGameBeanRequest(this);
         new UserBeanRequest(this);
+        new SuggestionBeanRequest(this);
     }
 
     public void addJsonRequest(JsonRequest req){

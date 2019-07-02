@@ -14,6 +14,7 @@ public class UserBean {
 
     public UserBean(){
     }
+
     public UserBean(String id){
         setId(id);
         if(getId() != null && !getId().equalsIgnoreCase("")){
