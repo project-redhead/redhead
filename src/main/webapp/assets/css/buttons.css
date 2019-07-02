@@ -1,0 +1,29 @@
+@import 'fonts.css';
+
+a.rh-button,
+button.rh-button {
+    background-color: #d31a1a;
+    color: #fff;
+
+    padding: 8px 16px;
+    border-radius: 4px;
+
+    font-family: 'Heebo';
+    text-decoration: none;
+    cursor: pointer;
+
+    box-shadow: 0px 4px 4px 0px #0000001a;
+
+    transition: all linear 0.2s;
+}
+
+a.rh-button:hover,
+button.rh-button:hover {
+    background-color: #c21717;
+    box-shadow: 0px 4px 4px 0px #0000003d;
+}
+
+a.rh-button:active,
+button.rh-button:active {
+    background-color: rgb(32, 32, 32);
+}
