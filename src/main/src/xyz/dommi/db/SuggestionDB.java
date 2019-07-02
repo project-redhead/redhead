@@ -18,6 +18,10 @@ public class SuggestionDB extends DBManager{
         return getObjectByID(id,true);
     }
 
+    public void setRead(String id, boolean read){
+        setBooleanByID(id, "read", read, true);
+    }
+
     public Response createSuggestion(String userId, String content){
         DBObject object = new BasicDBObject()
                 .append("userId", userId)
