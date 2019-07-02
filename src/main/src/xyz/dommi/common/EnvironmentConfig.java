@@ -54,4 +54,12 @@ public class EnvironmentConfig {
         else
             return key;
     }
+    public static String getWebhookURL() {
+        String key = System.getenv("WEBHOOK_URL");
+
+        if (key == "" || key == null)
+            return "null";
+        else
+            return key;
+    }
 }
