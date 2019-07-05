@@ -32,6 +32,7 @@ public class RequestManager {
         new SuggestionInfo(this);
         new CreateSuggestion(this);
         new SetSuggestionRead(this);
+        new GetMealToday(this);
 
         new BetBeanRequest(this);
         new BetGameBeanRequest(this);
@@ -53,7 +54,9 @@ public class RequestManager {
                 handleBeanRequest(request,response);
                 break;
             case JSON:
-                response.getWriter().append(handleJSONRequest(request).toString());
+                response.setContentType("application/json");
+                response.setCharacterEncoding("UTF-8");
+                response.getWriter().print(handleJSONRequest(request).toString());
                 break;
         }
 
