@@ -27,7 +27,14 @@
         console.log(result);
 
         result.value.forEach(element => {
-            $('#suggestion_list').append(`<li>${element.content}</li>`);
+            var date = new Date(element.date.$date);
+
+            $('#suggestion_list').append(
+                `<li>
+                    <small>${date.toLocaleString()}</small> <br/>
+                    ${element.content}
+                </li>`
+            );
         });
     </script>
 </body>
