@@ -1,6 +1,10 @@
 function submitFeedback() {
-    var content = $('#inputFeedback').val();
-    alert(content);
+    var feedbackContent = $('#inputFeedback').val();
+    postSuggestion(feedbackContent).then(success => {
+        if (success) {
+            alert('Dein Anliegen wurde in den Kummerkasten eingeworfen.');
+        }
+    });
 }
 
 function init() {
