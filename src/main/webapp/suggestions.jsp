@@ -16,7 +16,7 @@
     <jsp:useBean id="bean" class="xyz.dommi.beans.SuggestionBean" scope="request"/>
 
     <div>
-        <h1>Dein Kummerkasten</h1>
+        <h1>Kummerkasten</h1>
         <ul id="suggestion_list" class="rh-listview">
 
         </ul>

@@ -33,7 +33,7 @@
             <div class="rh-widget-content">
                 <input type="text" id="inputFeedback" />
                 <a class="rh-button" href="#" onclick="submitFeedback(this)">Absenden</a>
-                <a class="rh-button" href="/request?type=SuggestionBean&format=bean&redirect=/mysuggestions.jsp">Meine Einsendungen</a>
+                <a class="rh-button" href="/request?type=SuggestionBean&format=bean&redirect=/suggestions.jsp">Meine Einsendungen</a>
             </div>
         </div>
     </div>
