@@ -10,6 +10,7 @@
 <head>
     <title>Project Redhead</title>
     <link rel="stylesheet" type="text/css" href="/assets/css/_redhead.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 <body>

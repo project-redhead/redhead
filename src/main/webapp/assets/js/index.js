@@ -2,7 +2,9 @@ function submitFeedback() {
     var feedbackContent = $('#inputFeedback').val();
     postSuggestion(feedbackContent).then(success => {
         if (success) {
-            alert('Dein Anliegen wurde in den Kummerkasten eingeworfen.');
+            Swal.fire({
+                text: 'Dein Anliegen wurde in den Kummerkasten eingeworfen'
+            });
         }
     });
 }
