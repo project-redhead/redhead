@@ -17,9 +17,11 @@ public class SuggestionBean {
 
     public SuggestionBean(String id){
         this.id = id;
-        DB db = DBConnection.getInstance().connect();
-        SuggestionDB suggestionDB = new SuggestionDB(db);
-        suggestion = new Response(ResponseType.OK,suggestionDB.getSuggestion(id)).toString();
+        if(id != null && !id.equalsIgnoreCase("")){
+            DB db = DBConnection.getInstance().connect();
+            SuggestionDB suggestionDB = new SuggestionDB(db);
+            suggestion = new Response(ResponseType.OK,suggestionDB.getSuggestion(id)).toString();
+        }
     }
 
     public void setId(String id) {
@@ -44,5 +46,12 @@ public class SuggestionBean {
             return suggestion;
         }
         return new Response(ResponseType.ERROR,"ID not found").toString();
+    }
+
+    public String getSuggestionlist(){
+        DB db = DBConnection.getInstance().connect();
+        SuggestionDB suggestionDB = new SuggestionDB(db);
+
+        return new Response(ResponseType.OK, suggestionDB.getSuggestionList()).toString();
     }
 }
