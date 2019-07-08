@@ -34,7 +34,15 @@
             <div class="rh-widget-content">
                 <input type="text" id="inputFeedback" />
                 <a class="rh-button" href="#" onclick="submitFeedback(this)">Absenden</a>
-                <a class="rh-button" href="/request?type=SuggestionBean&format=bean&redirect=/suggestions.jsp">Meine Einsendungen</a>
+                <a class="rh-button" href="/request?type=SuggestionBean&format=bean&redirect=/suggestions.jsp">Einsendungen</a>
+            </div>
+        </div>
+        <div class="rh-widget">
+            <div class="rh-widget-header">
+                Stundenplan
+            </div>
+            <div class="rh-widget-content">
+                <a class="rh-button" href="/schedule.jsp">Mein Stundenplan</a>
             </div>
         </div>
     </div>
