@@ -45,6 +45,14 @@
                 <a class="rh-button" href="/schedule.jsp">Mein Stundenplan</a>
             </div>
         </div>
+        <div class="rh-widget">
+            <div class="rh-widget-header">
+                Fahrplan
+            </div>
+            <div class="rh-widget-content">
+                <a class="rh-button" href="/bahn.jsp">Meine Bahnverbindung</a>
+            </div>
+        </div>
     </div>
 
     <script src="/assets/js/common/http-service.js"></script>
