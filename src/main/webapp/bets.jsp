@@ -19,6 +19,53 @@
     <div>
         <a href="/">&laquo; Zurück</a>
         <h1>Wetten</h1>
+
+        <div>
+          <div class="rh-widget">
+              <div class="rh-widget-header">
+                  Eine neue Wette erstellen
+              </div>
+              <div class="rh-widget-content">
+                  <form>
+                    <div>
+                      <label for="description">Wie lautet die Wette?</label>
+                      <input type="text" class="block" name="description" placeholder="Wird morgen jemand zu spät erscheinen?">
+                    </div>
+
+                    <hr/>
+
+                    <div>
+                      <label for="options">Füge ein paar Optionen hinzu:</label>
+
+                      <div rh-id="options_container">
+
+                      </div>
+
+                      <a id="btnAddOption" class="rh-link-button" href="#">
+                        <small style="width:100%;text-align:right">Neue Option</small>
+                      </a>
+
+                      <script>
+                        $('#btnAddOption').click(handler => {
+                          $('[rh-id=options_container]').append(
+                            `<div>
+                              <input class="block" type="text">
+                            </div>`
+                          );
+                        });
+                      </script>
+                    </div>
+
+                    <hr />
+
+                    <div>
+                      <a class="rh-button" href="#">Wette eröffnen</a>
+                    </div>
+                  </form>
+              </div>
+          </div>
+        </div>
+
         <ul id="bets_list" class="rh-listview">
 
         </ul>
