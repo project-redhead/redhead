@@ -17,6 +17,10 @@ public class UserBean {
 
     public UserBean(String id){
         setId(id);
+    }
+
+    public void setId(String id) {
+        this.id = id;
         if(getId() != null && !getId().equalsIgnoreCase("")){
             DB db = DBConnection.getInstance().connect();
             UserDB userDB = new UserDB(db);
@@ -25,10 +29,6 @@ public class UserBean {
             points = userDB.getPoints(id);
             role = userDB.getRoleID(id);
         }
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public void setName(String name) {

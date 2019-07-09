@@ -16,9 +16,10 @@ public class UserInfo extends JsonRequest {
         super("UserInfo", manager);
     }
     public Response handleRequest(HttpServletRequest request){
-        String id = HttpUtils.getUserIdFromJwt(request);
-        System.out.println(id);
-
+        String id = request.getParameter("id");
+        if(id == null || id.equalsIgnoreCase("")) {
+            id = HttpUtils.getUserIdFromJwt(request);
+        }
         if(id != null && !id.equals("")){
 
             DB db = DBConnection.getInstance().connect();
