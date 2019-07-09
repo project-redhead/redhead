@@ -1,6 +1,7 @@
 package xyz.dommi.requests.json;
 
 import com.mongodb.DB;
+import com.mongodb.DBObject;
 import xyz.dommi.common.HttpUtils;
 import xyz.dommi.db.DBConnection;
 import xyz.dommi.db.UserDB;
@@ -25,7 +26,13 @@ public class UserInfo extends JsonRequest {
             DB db = DBConnection.getInstance().connect();
             UserDB userDB = new UserDB(db);
 
-            return new Response(ResponseType.OK, userDB.getUser(id));
+            DBObject user = userDB.getUser(id);
+
+            if(user == null){
+                return new Response(ResponseType.ERROR,"User not found");
+            }
+
+            return new Response(ResponseType.OK, user);
         }
         return new Response(ResponseType.ERROR,"Id not valid");
     }
