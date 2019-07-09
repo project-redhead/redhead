@@ -34,7 +34,7 @@
       gameList.value.forEach(async game => {
 
         let date = new Date(game.date.$date);
-        let user = await getUser(game.creator);
+        let user = (await getUser(game.creator)).value;
 
         let optionsHtml = '';
         game.options.forEach(option => {
