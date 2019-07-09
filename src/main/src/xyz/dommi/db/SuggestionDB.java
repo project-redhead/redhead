@@ -8,6 +8,7 @@ import xyz.dommi.requests.Response;
 import xyz.dommi.requests.ResponseType;
 
 import java.util.Date;
+import java.util.List;
 
 public class SuggestionDB extends DBManager{
     public SuggestionDB(DB db) {
@@ -16,6 +17,15 @@ public class SuggestionDB extends DBManager{
 
     public DBObject getSuggestion(String id){
         return getObjectByID(id,true);
+    }
+
+    public BasicDBList getSuggestionList(){
+        List<DBObject> list = getDBObjectListByCollection();
+        BasicDBList dbList = new BasicDBList();
+        for (DBObject object : list) {
+            dbList.add(objectIDToID((BasicDBObject) object));
+        }
+        return dbList;
     }
 
     public void setRead(String id, boolean read){
