@@ -24,6 +24,19 @@
 
     <script src="/assets/js/common/http-service.js"></script>
     <script>
+      function initList() {
+        // Hide all options
+        $('[rh-id-options]').hide();
+
+        // Add event listeners
+        $('[rh-id]').click(handler => {
+          let id = $(handler.target).attr('rh-id');
+
+          $(`[rh-id-options="${id}"]`).slideToggle();
+        });
+      }
+
+      // Init
       var gameList = JSON.parse('<jsp:getProperty name="bean" property="gameList"/>');
       console.log('Game list fetched', gameList);
 
@@ -57,16 +70,8 @@
             <small class="footnote">${game.bets.length} Leute haben bereits darauf gewettet</small>
           </li>
         `);
-      });
 
-      // Hide all options
-      $('[rh-id-options]').hide();
-
-      // Add event listeners
-      $('[rh-id]').click(handler => {
-        let id = $(handler.target).attr('rh-id');
-
-        $(`[rh-id-options="${id}"]`).slideToggle();
+        initList();
       });
     </script>
 </body>
