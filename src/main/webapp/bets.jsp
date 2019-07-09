@@ -17,6 +17,7 @@
     <jsp:useBean id="bean" class="xyz.dommi.beans.BetGameBean" scope="request"/>
 
     <div>
+        <a href="/">&laquo; Zurück</a>
         <h1>Wetten</h1>
         <ul id="bets_list" class="rh-listview">
 
