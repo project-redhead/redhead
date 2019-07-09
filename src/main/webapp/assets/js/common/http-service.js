@@ -18,8 +18,8 @@ async function postHttp(url, body) {
 }
 
 // User methods
-async function getUser() {
-    var res = await getHttp('/request?type=UserInfo');
+async function getUser(id = '') {
+    var res = await getHttp(`/request?type=UserInfo&id=${id}`);
 
     if (!res.ok) {
         alert('Ein Fehler ist aufgetreten beim Laden des Nutzers.');
@@ -31,6 +31,8 @@ async function getUser() {
     return user;
 }
 
+
+// Suggestions / Kummerkasten
 async function postSuggestion(content) {
     var escapedSuggestionContent = escape(content);
     var res = await postHttp('/request?type=CreateSuggestion&content=' + escapedSuggestionContent, { });
@@ -41,4 +43,17 @@ async function postSuggestion(content) {
     }
 
     return true;
+}
+
+
+// Bets
+async function postBet(gameId, points, optionIndex) {
+    let res = await postHttp(`/request?type=CreateBet&gameId=${gameId}&amount=${points}&option=${optionIndex}`);
+
+    let body = await res.json();
+
+    if (body.status == "OK")
+        return true;
+    else
+        return body;
 }

@@ -18,3 +18,11 @@ ul.rh-listview > li {
 ul.rh-listview > li:last-of-type {
     border-bottom: none;
 }
+
+ul.rh-listview > li .footnote {
+    font-style: italic;
+}
+
+ul.rh-listview > li .date {
+    color: #d31a1a;
+}

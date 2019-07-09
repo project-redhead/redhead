@@ -41,7 +41,7 @@ public class BetGameBean {
         return new Response(ResponseType.ERROR,"Id not valid").toString();
     }
 
-    public String getGamelist(){
+    public String getGameList(){
         DB db = DBConnection.getInstance().connect();
         BetGameDB gameDB = new BetGameDB(db);
 

@@ -1,5 +1,13 @@
 @import 'fonts.css';
 
+div.rh-button-bar {
+    margin: 8px 0px;
+}
+
+div.rh-button-bar > .rh-button {
+    margin-right: 4px;
+}
+
 a.rh-button,
 button.rh-button {
     background-color: #d31a1a;
@@ -26,4 +34,10 @@ button.rh-button:hover {
 a.rh-button:active,
 button.rh-button:active {
     background-color: rgb(32, 32, 32);
+}
+
+/* Small variant */
+.rh-button.small {
+    padding: 4px 8px;
+    font-size: 0.8em;
 }

@@ -153,7 +153,7 @@ public class UserDB extends DBManager {
             DBObject user = new BasicDBObject("_id", id)
                     .append("name", name)
                     .append("email", email)
-                    .append("points", 0)
+                    .append("points", 100)
                     .append("roleid", "user")
                     .append("reward", new Date())
                     .append("transactions", new BasicDBList());
