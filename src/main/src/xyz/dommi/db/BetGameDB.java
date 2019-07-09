@@ -138,7 +138,7 @@ public class BetGameDB extends DBManager {
                         if (value == betValue) {
                             String user = (String) bet.get("user");
                             int amount = (int) bet.get("amount");
-                            userDB.setPoints(user, userDB.getPoints(user) + getWinAmount(id, value, amount));
+                            userDB.addPoints(user, getWinAmount(id, value, amount), "Wettgewinn");
                         }
                     }
                 }

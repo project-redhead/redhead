@@ -14,6 +14,10 @@ public class BetGameBean {
     private String userId;
     private int answer;
 
+    public BetGameBean(){
+
+    }
+
 
     public BetGameBean(String id, String userId) {
         this.id = id;
