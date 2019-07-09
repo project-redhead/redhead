@@ -10,22 +10,21 @@ import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class UserInfo extends JsonRequest {
+public class ClaimReward extends JsonRequest{
 
-    public UserInfo(RequestManager manager){
-        super("UserInfo", manager);
+    public ClaimReward(RequestManager manager) {
+        super("ClaimReward", manager);
     }
-    public Response handleRequest(HttpServletRequest request){
-        String id = request.getParameter("id");
-        if(id == null || id.equalsIgnoreCase("")) {
-            id = HttpUtils.getUserIdFromJwt(request);
-        }
-        if(id != null && !id.equals("")){
 
+    @Override
+    public Response handleRequest(HttpServletRequest request) {
+        String id = HttpUtils.getUserIdFromJwt(request);
+        System.out.println(id);
+
+        if(id != null && !id.equals("")){
             DB db = DBConnection.getInstance().connect();
             UserDB userDB = new UserDB(db);
-
-            return new Response(ResponseType.OK, userDB.getUser(id));
+            return userDB.collectReward(id);
         }
         return new Response(ResponseType.ERROR,"Id not valid");
     }
