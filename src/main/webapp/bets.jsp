@@ -42,6 +42,7 @@
 
           let gameId = $(optionElement).attr('rh-game');
           let gameOption = $(optionElement).attr('rh-bet-option');
+          let gameOptionId = $(optionElement).attr('rh-bet-option-id');
 
           // Get current user meta data
           let user = await getUser();
@@ -62,13 +63,27 @@
           // Evaluate dialog result
           if (dialogResult.value) {
             // Validate
+            let points = dialogResult.value;
 
             // Submit to API
+            var betResult = await postBet(gameId, points, gameOptionId);
+
+            // Refresh page
+            if (betResult === true)
+              Swal.fire('Deine Wette wurde eingereicht');
+            else
+              Swal.fire({
+                type: 'error',
+                text: betResult.value
+              });
           }
         });
       }
 
       async function fetchList() {
+        // Clear
+        $('#bets_list').children().remove();
+
         // Init
         var gameList = JSON.parse('<jsp:getProperty name="bean" property="gameList"/>');
         console.log('Game list fetched', gameList);
@@ -81,12 +96,17 @@
           let date = new Date(game.date.$date);
           let user = (await getUser(game.creator)).value;
 
+
           let optionsHtml = '';
+          let optionId = 0;
+
           game.options.forEach(option => {
             optionsHtml +=
-              `<a href="#" rh-bet-option="${option}" rh-game="${game._id}" class="rh-button small">
+              `<a href="#" rh-bet-option="${option}" rh-bet-option-id="${optionId}" rh-game="${game._id}" class="rh-button small">
                 ${option}
               </a>`;
+
+              optionId++;
           });
 
           $('#bets_list').append(

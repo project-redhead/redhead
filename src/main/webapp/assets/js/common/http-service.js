@@ -32,7 +32,7 @@ async function getUser(id = '') {
 }
 
 
-
+// Suggestions / Kummerkasten
 async function postSuggestion(content) {
     var escapedSuggestionContent = escape(content);
     var res = await postHttp('/request?type=CreateSuggestion&content=' + escapedSuggestionContent, { });
@@ -43,4 +43,17 @@ async function postSuggestion(content) {
     }
 
     return true;
+}
+
+
+// Bets
+async function postBet(gameId, points, optionIndex) {
+    let res = await postHttp(`/request?type=CreateBet&gameId=${gameId}&amount=${points}&option=${optionIndex}`);
+
+    let body = await res.json();
+
+    if (body.status == "OK")
+        return true;
+    else
+        return body;
 }
