@@ -18,8 +18,8 @@ async function postHttp(url, body) {
 }
 
 // User methods
-async function getUser() {
-    var res = await getHttp('/request?type=UserInfo');
+async function getUser(id = '') {
+    var res = await getHttp(`/request?type=UserInfo&id=${id}`);
 
     if (!res.ok) {
         alert('Ein Fehler ist aufgetreten beim Laden des Nutzers.');
@@ -30,6 +30,8 @@ async function getUser() {
     console.log(user);
     return user;
 }
+
+
 
 async function postSuggestion(content) {
     var escapedSuggestionContent = escape(content);

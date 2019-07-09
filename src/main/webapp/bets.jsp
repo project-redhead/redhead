@@ -31,10 +31,10 @@
         alert("Ein Fehler ist aufgetreten");
       }
 
-      gameList.value.forEach(game => {
+      gameList.value.forEach(async game => {
 
         let date = new Date(game.date.$date);
-        // let user = getHttp();
+        let user = await getUser(game.creator);
 
         let optionsHtml = '';
         game.options.forEach(option => {
@@ -46,7 +46,7 @@
 
         $('#bets_list').append(
           `<li rh-id="${game._id}">
-            <small class="date">${date.toLocaleString()} von ${game.creator}</small><br/>
+            <small class="date">${date.toLocaleString()} von ${user.name}</small><br/>
             ${game.description} <br/>
             <div rh-id-options="${game._id}">
               <hr/>
