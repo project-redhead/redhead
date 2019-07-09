@@ -36,20 +36,35 @@
           $(`[rh-id-options="${id}"]`).slideToggle();
         });
 
-        $('[rh-bet-option]').click(handler => {
+        $('[rh-bet-option]').click(async handler => {
+          // Gather properties
           let optionElement = handler.target;
 
           let gameId = $(optionElement).attr('rh-game');
           let gameOption = $(optionElement).attr('rh-bet-option');
 
-          Swal.fire({
+          // Get current user meta data
+          let user = await getUser();
+          let userTotalPoints = user.value.points;
+
+          // Prepare dialog
+          let dialogResult = await Swal.fire({
             type: 'question',
             title: `Für "${gameOption}" wetten`,
             text: 'Wie hoch ist Dein Wetteinsatz?',
             input: 'text',
             showCancelButton: true,
-            confirmButtonText: 'Wette einreichen'
+            confirmButtonText: 'Wette einreichen',
+
+            footer: `Verfügbare Punkte: ${userTotalPoints}`
           });
+
+          // Evaluate dialog result
+          if (dialogResult.value) {
+            // Validate
+
+            // Submit to API
+          }
         });
       }
 
