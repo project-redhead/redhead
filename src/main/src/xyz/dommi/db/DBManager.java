@@ -6,6 +6,7 @@ import org.bson.types.ObjectId;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -190,6 +191,13 @@ public abstract class DBManager {
     public static BasicDBObject objectIDToID(BasicDBObject object) {
         ((BasicDBObject) object).replace("_id",((ObjectId) object.get("_id")).toString());
         return object;
+    }
+
+    public static Date addHoursToJavaUtilDate(Date date, int hours) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.HOUR_OF_DAY, hours);
+        return calendar.getTime();
     }
 
 }

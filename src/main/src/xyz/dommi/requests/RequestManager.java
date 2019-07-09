@@ -33,6 +33,7 @@ public class RequestManager {
         new CreateSuggestion(this);
         new SetSuggestionRead(this);
         new GetMealToday(this);
+        new ClaimReward(this);
 
         new BetBeanRequest(this);
         new BetGameBeanRequest(this);

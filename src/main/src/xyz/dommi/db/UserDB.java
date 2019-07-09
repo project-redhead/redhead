@@ -8,6 +8,7 @@ import org.json.JSONArray;
 import xyz.dommi.requests.Response;
 import xyz.dommi.requests.ResponseType;
 
+import java.util.Date;
 import java.util.List;
 
 public class UserDB extends DBManager {
@@ -34,6 +35,10 @@ public class UserDB extends DBManager {
 
     public int getPoints(String id) {
         return getIntByID(id, "points");
+    }
+
+    public Date getLastReward(String id){
+        return getDateByID(id, "reward");
     }
 
     public List<DBObject> getUsers() {
@@ -80,6 +85,20 @@ public class UserDB extends DBManager {
         }
         setPoints(id, getPoints(id)-points);
         return true;
+    }
+
+    public Response collectReward(String id){
+        Date last = getLastReward(id);
+        Date next = addHoursToJavaUtilDate(last,24);
+        if(new Date().after(next)){
+            double maxPoints = 1000;
+            int points = (int)(maxPoints * Math.random());
+
+            addPoints(id,points,"");
+            return new Response(ResponseType.OK,""+points);
+        }
+
+        return new Response(ResponseType.ERROR,"You can only claim this after 24h");
     }
 
     public Response addBet(String id, String gameid, int amount, int option) {
@@ -136,6 +155,7 @@ public class UserDB extends DBManager {
                     .append("email", email)
                     .append("points", 0)
                     .append("roleid", "user")
+                    .append("reward", new Date())
                     .append("transactions", new BasicDBList());
             getCollection().insert(user);
         }
