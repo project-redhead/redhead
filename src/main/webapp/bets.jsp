@@ -22,6 +22,7 @@
         </ul>
     </div>
 
+    <script src="/assets/js/common/http-service.js"></script>
     <script>
       var gameList = JSON.parse('<jsp:getProperty name="bean" property="gameList"/>');
       console.log('Game list fetched', gameList);
@@ -33,15 +34,39 @@
       gameList.value.forEach(game => {
 
         let date = new Date(game.date.$date);
+        // let user = getHttp();
+
+        let optionsHtml = '';
+        game.options.forEach(option => {
+          optionsHtml +=
+            `<a href="#" id="" class="rh-button small">
+              ${option}
+            </a>`;
+        });
 
         $('#bets_list').append(
           `<li rh-id="${game._id}">
-            <small class="date">${date.toLocaleString()}</small><br/>
-            ${game.description}
+            <small class="date">${date.toLocaleString()} von ${game.creator}</small><br/>
+            ${game.description} <br/>
+            <div rh-id-options="${game._id}">
+              <hr/>
+              <small>Wette abgeben:</small>
+              <div class="rh-button-bar">${optionsHtml}</div>
+            </div>
             <hr/>
             <small class="footnote">${game.bets.length} Leute haben bereits darauf gewettet</small>
           </li>
         `);
+      });
+
+      // Hide all options
+      $('[rh-id-options]').hide();
+
+      // Add event listeners
+      $('[rh-id]').click(handler => {
+        let id = $(handler.target).attr('rh-id');
+
+        $(`[rh-id-options="${id}"]`).slideToggle();
       });
     </script>
 </body>
