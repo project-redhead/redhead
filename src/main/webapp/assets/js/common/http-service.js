@@ -28,6 +28,9 @@ async function getUser(id = '') {
 
     var user = await res.json();
     console.log(user);
+
+    window.currentUser = user;
+
     return user;
 }
 
@@ -47,9 +50,25 @@ async function postSuggestion(content) {
 
 
 // Games
+async function getGame(id) {
+    let url = `/request?type=GameInfo&id=${id}`;
+    let res = await getHttp(url);
+
+    let body = await res.json();
+    return body;
+}
+
 async function postGame(description, options) {
     let optionString = Array(options).join(',');
     let url = `/request?type=CreateGame&description=${description}&options=${optionString}`;
+    let res = await postHttp(url);
+
+    let body = await res.json();
+    return body;
+}
+
+async function postAnswer(gameId, optionIndex) {
+    let url = `/request?type=SetAnswer&id=${gameId}&value=${optionIndex}`;
     let res = await postHttp(url);
 
     let body = await res.json();

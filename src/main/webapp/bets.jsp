@@ -91,13 +91,16 @@
           </div>
         </div>
 
-        <ul id="bets_list" class="rh-listview">
+        <ul id="bets_list" class="rh-listview" style="margin: 0px 10px">
 
         </ul>
     </div>
 
     <script src="/assets/js/common/http-service.js"></script>
     <script>
+
+      var gameList;
+
       function initList() {
         // Hide all options
         $('[rh-id-options]').hide();
@@ -111,6 +114,33 @@
             height: 'toggle',
             opacity: 'toggle'
           });
+        });
+
+        // Submit answer
+        $('.btnSelectAnswer[rh-game-id]').click(async handler => {
+          // Get game ID
+          let gameId = $(handler.target).attr('rh-game-id');
+
+          // Get available options from game
+          let game = await getGame(gameId);
+          let gameOptions = game.value.options;
+
+          // Ask user for final answer
+          const { value: selectIndex } = await Swal.fire({
+            title: 'Lösung veröffentlichen',
+            text: 'Wähle die richtige Antwort aus',
+            input: 'select',
+            inputOptions: gameOptions,
+            showCancelButton: true
+          });
+
+          // Submit to API
+          if (selectIndex) {
+            let res = await postAnswer(gameId, selectIndex);
+            if (res.status == 'OK') {
+              location.reload();
+            }
+          }
         });
 
         $('[rh-bet-option]').click(async handler => {
@@ -162,16 +192,20 @@
         $('#bets_list').children().remove();
 
         // Init
-        var gameList = JSON.parse('<jsp:getProperty name="bean" property="gameList"/>');
+        gameList = JSON.parse('<jsp:getProperty name="bean" property="gameList"/>');
         console.log('Game list fetched', gameList);
 
         if (gameList.status != "OK") {
           alert("Ein Fehler ist aufgetreten");
         }
 
+        let user = await getUser();
+
         for (const game of gameList.value.reverse()) {
+          let isCreator = user.value._id == game.creator;
+
           let date = new Date(game.date.$date);
-          let user = (await getUser(game.creator)).value;
+          let creatorUser = (await getUser(game.creator)).value;
 
           let optionsHtml = '';
           let optionId = 0;
@@ -187,12 +221,18 @@
 
           $('#bets_list').append(
             `<li rh-id="${game._id}" style="cursor: pointer">
-              <small class="date">${date.toLocaleString()} von ${user.name}</small><br/>
+              <small class="date">
+                ${date.toLocaleString()} ${isCreator ? '(von dir!)' : 'von ' + creatorUser.name}
+              </small><br/>
+
               ${game.description}
+
               <div class="rh-card" rh-id-options="${game._id}">
                 <div class="rh-card-content">
-                  <small>Wette abgeben:</small>
-                  <div class="rh-button-bar">${optionsHtml}</div>
+                  ${(game.answer === null)
+                    ? `${!isCreator ? `<small>Wette abgeben:</small>` : `<small><a class="rh-link-button btnSelectAnswer" rh-game-id="${game._id}" href="#">Lösung veröffentlichen &raquo;</a></small>`}
+                    <div class="rh-button-bar">${optionsHtml}</div>`
+                    : `<small>Lösung: ${game.options[game.answer]}</small>`}
                 </div>
               </div>
               <small class="footnote">${game.bets.length} Leute wetteten bereits darauf</small>
