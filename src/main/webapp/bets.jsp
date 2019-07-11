@@ -32,31 +32,27 @@
                       <input id="newGameDescriptionInput" type="text" class="block" name="description" placeholder="Wird morgen jemand zu spät erscheinen?">
                     </div>
 
-                    <hr/>
+                    <div class="rh-card" style="margin: 16px 0px">
+                      <div class="rh-card-content">
+                        <label for="options">Füge ein paar Optionen hinzu:</label>
 
-                    <div>
-                      <label for="options">Füge ein paar Optionen hinzu:</label>
+                        <div rh-id="options_container"></div>
 
-                      <div rh-id="options_container">
+                        <a id="btnAddOption" class="rh-link-button" href="#">
+                          <small style="width:100%;text-align:right">Neue Option</small>
+                        </a>
 
+                        <script>
+                          $('#btnAddOption').click(handler => {
+                            $('[rh-id=options_container]').append(
+                              `<div game-option-container>
+                                <input game-option class="block" type="text">
+                              </div>`
+                            );
+                          });
+                        </script>
                       </div>
-
-                      <a id="btnAddOption" class="rh-link-button" href="#">
-                        <small style="width:100%;text-align:right">Neue Option</small>
-                      </a>
-
-                      <script>
-                        $('#btnAddOption').click(handler => {
-                          $('[rh-id=options_container]').append(
-                            `<div game-option-container>
-                              <input game-option class="block" type="text">
-                            </div>`
-                          );
-                        });
-                      </script>
                     </div>
-
-                    <hr />
 
                     <div>
                       <a id="btnCreateBet" class="rh-button" href="#">Wette eröffnen</a>
@@ -173,10 +169,9 @@
           alert("Ein Fehler ist aufgetreten");
         }
 
-        for (const game of gameList.value) {
+        for (const game of gameList.value.reverse()) {
           let date = new Date(game.date.$date);
           let user = (await getUser(game.creator)).value;
-
 
           let optionsHtml = '';
           let optionId = 0;
@@ -191,7 +186,7 @@
           });
 
           $('#bets_list').append(
-            `<li rh-id="${game._id}">
+            `<li rh-id="${game._id}" style="cursor: pointer">
               <small class="date">${date.toLocaleString()} von ${user.name}</small><br/>
               ${game.description}
               <div class="rh-card" rh-id-options="${game._id}">
