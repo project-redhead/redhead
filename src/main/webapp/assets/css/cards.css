@@ -1,0 +1,11 @@
+div.rh-card {
+	border-radius: 4px;
+	background-color: #f3f3f3;
+	border: #e0e0e0 solid 1px;
+
+	margin: 4px 0px;
+}
+
+div.rh-card > div.rh-card-content {
+	margin: 16px;
+}

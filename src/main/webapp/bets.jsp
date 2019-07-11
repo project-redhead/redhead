@@ -107,10 +107,14 @@
         $('[rh-id-options]').hide();
 
         // Add event listeners
-        $('[rh-id]').click(handler => {
+        $('li[rh-id]').click(handler => {
           let id = $(handler.target).attr('rh-id');
 
-          $(`[rh-id-options="${id}"]`).slideToggle();
+          $(handler.target).toggleClass('interactive');
+          $(`[rh-id-options="${id}"]`).animate({
+            height: 'toggle',
+            opacity: 'toggle'
+          });
         });
 
         $('[rh-bet-option]').click(async handler => {
@@ -189,13 +193,13 @@
           $('#bets_list').append(
             `<li rh-id="${game._id}">
               <small class="date">${date.toLocaleString()} von ${user.name}</small><br/>
-              ${game.description} <br/>
-              <div rh-id-options="${game._id}">
-                <hr/>
-                <small>Wette abgeben:</small>
-                <div class="rh-button-bar">${optionsHtml}</div>
+              ${game.description}
+              <div class="rh-card" rh-id-options="${game._id}">
+                <div class="rh-card-content">
+                  <small>Wette abgeben:</small>
+                  <div class="rh-button-bar">${optionsHtml}</div>
+                </div>
               </div>
-              <hr/>
               <small class="footnote">${game.bets.length} Leute wetteten bereits darauf</small>
             </li>
           `);
