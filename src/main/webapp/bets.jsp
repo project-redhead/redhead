@@ -26,10 +26,10 @@
                   Eine neue Wette erstellen
               </div>
               <div class="rh-widget-content">
-                  <form>
+                  <div>
                     <div>
                       <label for="description">Wie lautet die Wette?</label>
-                      <input type="text" class="block" name="description" placeholder="Wird morgen jemand zu spät erscheinen?">
+                      <input id="newGameDescriptionInput" type="text" class="block" name="description" placeholder="Wird morgen jemand zu spät erscheinen?">
                     </div>
 
                     <hr/>
@@ -49,7 +49,7 @@
                         $('#btnAddOption').click(handler => {
                           $('[rh-id=options_container]').append(
                             `<div>
-                              <input class="block" type="text">
+                              <input game-option class="block" type="text">
                             </div>`
                           );
                         });
@@ -59,9 +59,33 @@
                     <hr />
 
                     <div>
-                      <a class="rh-button" href="#">Wette eröffnen</a>
+                      <a id="btnCreateBet" class="rh-button" href="#">Wette eröffnen</a>
+                      <script>
+                        $('#btnCreateBet').click(async handler => {
+                          let options = $('input[game-option]').toArray();
+                          let optionValues = [];
+                          options.forEach(element => {
+                            console.log(options);
+                            optionValues.push($(element).val());
+                          });
+
+                          let description = $('#newGameDescriptionInput').val();
+
+                          let response = await postGame(description, optionValues);
+                          if (response.status == "OK") {
+                            Swal.fire('Deine Wette wurde eröffnet');
+                          }
+                          else {
+                            Swal.fire({
+                              text: 'Ein Fehler ist aufgetreten. Bitte versuche es erneut.',
+                              type: 'error'
+                            })
+                          }
+                          // console.log(options);
+                        });
+                      </script>
                     </div>
-                  </form>
+                  </div>
               </div>
           </div>
         </div>
@@ -167,7 +191,7 @@
                 <div class="rh-button-bar">${optionsHtml}</div>
               </div>
               <hr/>
-              <small class="footnote">${game.bets.length} Leute haben bereits darauf gewettet</small>
+              <small class="footnote">${game.bets.length} Leute wetteten bereits darauf</small>
             </li>
           `);
         }

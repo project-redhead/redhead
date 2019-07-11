@@ -46,6 +46,17 @@ async function postSuggestion(content) {
 }
 
 
+// Games
+async function postGame(description, options) {
+    let optionString = Array(options).join(',');
+    let url = `/request?type=CreateGame&description=${description}&options=${optionString}`;
+    let res = await postHttp(url);
+
+    let body = await res.json();
+    return body;
+}
+
+
 // Bets
 async function postBet(gameId, points, optionIndex) {
     let res = await postHttp(`/request?type=CreateBet&gameId=${gameId}&amount=${points}&option=${optionIndex}`);
