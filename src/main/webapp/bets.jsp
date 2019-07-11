@@ -48,7 +48,7 @@
                       <script>
                         $('#btnAddOption').click(handler => {
                           $('[rh-id=options_container]').append(
-                            `<div>
+                            `<div game-option-container>
                               <input game-option class="block" type="text">
                             </div>`
                           );
@@ -62,6 +62,7 @@
                       <a id="btnCreateBet" class="rh-button" href="#">Wette eröffnen</a>
                       <script>
                         $('#btnCreateBet').click(async handler => {
+                          // Get options
                           let options = $('input[game-option]').toArray();
                           let optionValues = [];
                           options.forEach(element => {
@@ -71,6 +72,7 @@
 
                           let description = $('#newGameDescriptionInput').val();
 
+                          // Submit game
                           let response = await postGame(description, optionValues);
                           if (response.status == "OK") {
                             Swal.fire('Deine Wette wurde eröffnet');
@@ -81,7 +83,10 @@
                               type: 'error'
                             })
                           }
-                          // console.log(options);
+
+                          // Clean up
+                          $('[game-option-container]').remove();
+                          $('#newGameDescriptionInput').val('');
                         });
                       </script>
                     </div>
