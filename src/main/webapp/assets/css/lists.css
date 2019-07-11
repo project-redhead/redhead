@@ -13,6 +13,11 @@ ul.rh-listview > li {
     background-color: #f3f3f3;
 
     border-bottom: #e0e0e0 solid 1px;
+    border-left-color: transparent;
+
+    transition: padding ease-in-out 0.2s,
+                border-left-color ease-in-out 0.5s,
+                background-color ease-in-out 0.2s;
 }
 
 ul.rh-listview > li:last-of-type {
@@ -25,4 +30,11 @@ ul.rh-listview > li .footnote {
 
 ul.rh-listview > li .date {
     color: #d31a1a;
+}
+
+ul.rh-listview > li.interactive {
+    padding: 32px 16px 32px 32px;
+    border-left: #d31a1a 3px solid;
+    background-color: #e8e8e8;
+    cursor: pointer;
 }

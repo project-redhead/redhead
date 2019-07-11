@@ -3,3 +3,8 @@ input[type=text] {
     font-family: 'Heebo';
     padding: 0px 10px;
 }
+
+input.block {
+    display: block;
+    width: 100%;
+}

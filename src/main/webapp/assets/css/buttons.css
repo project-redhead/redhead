@@ -41,3 +41,9 @@ button.rh-button:active {
     padding: 4px 8px;
     font-size: 0.8em;
 }
+
+
+/* Link button */
+a.rh-link-button {
+    color: #d31a1a;
+}
