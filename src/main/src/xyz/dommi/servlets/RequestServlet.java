@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Gets Requests and redirects them to the RequestManager
+ * Optional : Redirect the Client to a relative Path of the Website
+ */
 @WebServlet(name = "RequestServlet",value = "/request")
 public class RequestServlet extends HttpServlet {
 

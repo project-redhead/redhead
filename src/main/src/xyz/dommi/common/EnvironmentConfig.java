@@ -1,5 +1,8 @@
 package xyz.dommi.common;
 
+/**
+ * Reads Enviromentvariables
+ */
 public class EnvironmentConfig {
 
     public static class DiscordConfig {
@@ -11,6 +14,11 @@ public class EnvironmentConfig {
             this(clientId, clientSecret, null);
         }
 
+        /**
+         * @param clientId DiscordAPI-ID
+         * @param clientSecret DiscordAPI-SecretKey
+         * @param redirectUrl URL after login
+         */
         public DiscordConfig(String clientId, String clientSecret, String redirectUrl) {
             this.clientId = clientId;
             this.clientSecret = clientSecret;

@@ -11,12 +11,22 @@ import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Requests a existing Bet
+ */
 public class BetInfo extends JsonRequest {
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public BetInfo(RequestManager manager) {
         super("BetInfo", manager);
     }
 
+    /**
+     * @param request HttpServletRequest
+     * @return Bet as JSON-Object
+     */
     public Response handleRequest(HttpServletRequest request) {
         String id = request.getParameter("id");
         String userId = HttpUtils.getUserIdFromJwt(request);

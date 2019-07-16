@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.Optional;
 
+/**
+ * Decodes the encoded ClientID
+ */
 public class HttpUtils {
     public static String TOKEN_COOKIE_NAME = "token";
 

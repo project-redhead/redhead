@@ -12,12 +12,22 @@ import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Requests changing the read value of the Suggestion
+ */
 public class SetSuggestionRead extends JsonRequest{
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public SetSuggestionRead(RequestManager manager) {
         super("SetSuggestionRead", manager);
     }
 
+    /**
+     * @param request HttpServletRequest
+     * @return how the read value was changed
+     */
     @Override
     public Response handleRequest(HttpServletRequest request) {
         String id = request.getParameter("id");

@@ -10,12 +10,22 @@ import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Requests creation of a new Answer
+ */
 public class SetAnswer extends JsonRequest {
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public SetAnswer(RequestManager manager) {
         super("SetAnswer", manager);
     }
 
+    /**
+     * @param request HttpServletRequest
+     * @return Answer as JSON-Object
+     */
     public Response handleRequest(HttpServletRequest request) {
         String id = request.getParameter("id");
         String userId = HttpUtils.getUserIdFromJwt(request);

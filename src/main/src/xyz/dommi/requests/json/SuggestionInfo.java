@@ -12,12 +12,22 @@ import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Requests a existing Suggestion
+ */
 public class SuggestionInfo extends JsonRequest{
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public SuggestionInfo(RequestManager manager) {
         super("SuggestionInfo", manager);
     }
 
+    /**
+     * @param request HttpServletRequest
+     * @return Suggestion as JSON-Object
+     */
     @Override
     public Response handleRequest(HttpServletRequest request) {
         String id = request.getParameter("id");

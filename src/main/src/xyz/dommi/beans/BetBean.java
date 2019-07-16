@@ -7,16 +7,27 @@ import xyz.dommi.db.DBConnection;
 import xyz.dommi.requests.Response;
 import xyz.dommi.requests.ResponseType;
 
+/**
+ * Creates a new Bet or get a existing Bet from the Database
+ */
+
 public class BetBean {
 
     private String gameID;
     private String betID;
 
+    /**
+     * @param gameID Id of the related Game
+     * @param betID Id of the Bet
+     */
     public BetBean(String gameID, String betID) {
         this.gameID = gameID;
         this.betID = betID;
     }
 
+    /**
+     * @return the Bet or throws an exception if the Bet does not exist
+     */
     public String getInfo(){
         DB db = DBConnection.getInstance().connect();
         BetGameDB gameDB = new BetGameDB(db);
