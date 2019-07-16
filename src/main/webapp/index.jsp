@@ -80,5 +80,7 @@
 
     <script src="/assets/js/common/http-service.js"></script>
     <script src="/assets/js/index.js"></script>
+
+    <script src="https://kit.fontawesome.com/76ef5d807b.js"></script>
 </body>
 </html>
