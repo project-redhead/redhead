@@ -23,7 +23,7 @@ public class DBConnection {
                 db = mongoClient.getDB("admin");
                 System.out.println("Connected");
                 return db;
-            } catch (UnknownHostException ex) {
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
