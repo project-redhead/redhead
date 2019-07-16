@@ -188,6 +188,14 @@ public abstract class DBManager {
         setValueByID(id, key, value, objectID);
     }
 
+    protected void setDateByID(String id, String key, Date value) {
+        setDateByID(id,key,value,false);
+    }
+
+    protected void setDateByID(String id, String key, Date value, boolean objectID) {
+        setValueByID(id, key, value, objectID);
+    }
+
     public static BasicDBObject objectIDToID(BasicDBObject object) {
         ((BasicDBObject) object).replace("_id",((ObjectId) object.get("_id")).toString());
         return object;

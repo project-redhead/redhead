@@ -15,6 +15,21 @@ function submitFeedback() {
     });
 }
 
+    async function claimReward(){
+
+        var body = await postReward();
+        if(body.status == "OK"){
+            Swal.fire({
+                text: "Du hast "+body.value + " Punkte erhalten"
+            });
+        }else{
+            Swal.fire({
+                text: body.value,
+                type: 'error'
+            });
+        }
+    }
+
 function init() {
     getUser().then(u => {
         $('[rh-js=username]').text(u.value.name);

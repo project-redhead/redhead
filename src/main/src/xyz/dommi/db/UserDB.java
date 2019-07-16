@@ -45,6 +45,10 @@ public class UserDB extends DBManager {
         return getDBObjectListByCollection();
     }
 
+    public void setLastReward(String id, Date date){
+        setDateByID(id,"reward",date);
+    }
+
     public void setName(String id, String name) {
         setStringByID(id, "name", name);
     }
@@ -94,11 +98,12 @@ public class UserDB extends DBManager {
             double maxPoints = 1000;
             int points = (int)(maxPoints * Math.random());
 
-            addPoints(id,points,"");
+            addPoints(id,points,"Tägliche Belohnung");
+            setLastReward(id, new Date());
             return new Response(ResponseType.OK,""+points);
         }
 
-        return new Response(ResponseType.ERROR,"You can only claim this after 24h");
+        return new Response(ResponseType.ERROR,"Du kannst die Belohnung nur alle 24 Stunden einlösen!");
     }
 
     public Response addBet(String id, String gameid, int amount, int option) {
