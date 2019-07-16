@@ -67,6 +67,7 @@ async function postGame(description, options) {
     return body;
 }
 
+
 async function postAnswer(gameId, optionIndex) {
     let url = `/request?type=SetAnswer&id=${gameId}&value=${optionIndex}`;
     let res = await postHttp(url);

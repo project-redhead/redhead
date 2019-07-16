@@ -51,3 +51,8 @@ div.rh-sidebar div.rh-sidebar-action-item.active i.rh-icon {
 div.rh-sidebar div.rh-sidebar-action-item.active span.border {
     opacity: 1;
 }
+
+body, html {
+    padding: 0px;
+    margin: 0px;
+}
