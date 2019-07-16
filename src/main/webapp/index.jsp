@@ -17,7 +17,7 @@
 <body>
     <div bp="grid">
         <div id="sidebar" bp="1"></div>
-        <div id="widget-area" bp="11">
+        <div id="widget-area" bp="11" class="rh-content">
             <div>
                 <h3>
                     <span>Hey </span>

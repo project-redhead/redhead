@@ -2,13 +2,17 @@
 
 div.rh-sidebar {
     height: 100vh;
-    width: 80px;
+    width: 100%;
     background-color: #d31a1a;
     box-shadow: 6px 0 12px #000 30;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+}
+
+#sidebar + .rh-content {
+    margin: 0px 16px;
 }
 
 div.rh-sidebar .rh-sidebar-top {
