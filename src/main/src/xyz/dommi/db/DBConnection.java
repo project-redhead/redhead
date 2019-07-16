@@ -20,7 +20,7 @@ public class DBConnection {
             try {
                 System.out.println("Connecting..");
                 MongoClient mongoClient = new MongoClient(new MongoClientURI(EnvironmentConfig.getDatabaseConnectionString()));
-                db = mongoClient.getDB("admin");
+                db = mongoClient.getDB("redhead");
                 System.out.println("Connected");
                 return db;
             } catch (Exception ex) {
