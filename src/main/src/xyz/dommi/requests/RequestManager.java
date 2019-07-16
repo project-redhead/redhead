@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Manges every Request
  */
 public class RequestManager {
 
@@ -22,7 +22,7 @@ public class RequestManager {
     }
 
     /**
-     *
+     * Creates the correct Request
      */
     private void init(){
         jsonRequests = new ArrayList<>();
@@ -70,8 +70,8 @@ public class RequestManager {
     }
 
     /**
-     * @param request
-     * @return
+     * @param request HttpServletrequest
+     * @return Format of the request
      */
     private RequestFormat getFormat(HttpServletRequest request){
         String format = request.getParameter("format");
@@ -86,7 +86,7 @@ public class RequestManager {
     }
 
     /**
-     * @param request
+     * @param request HttpServletRequest
      * @return
      */
     private Response handleJSONRequest(HttpServletRequest request){
