@@ -1,3 +1,7 @@
+/* Third party */
+@import "../vendor/blueprint.min.css";
+
+/* Redhead */
 @import "./fonts.css";
 @import "./forms.css";
 @import "./cards.css";

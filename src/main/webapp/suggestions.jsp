@@ -11,15 +11,22 @@
     <title>Project Redhead - Kummerkasten</title>
     <link rel="stylesheet" type="text/css" href="/assets/css/_redhead.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/assets/js/_sidebar.js"></script>
 </head>
 <body>
     <jsp:useBean id="bean" class="xyz.dommi.beans.SuggestionBean" scope="request"/>
 
-    <div>
-        <h1>Kummerkasten</h1>
-        <ul id="suggestion_list" class="rh-listview">
+    <div bp="grid gap-none">
+        <div id="sidebar" bp="1">
 
-        </ul>
+        </div>
+
+        <div class="rh-content" bp="11">
+            <h1>Kummerkasten</h1>
+            <ul id="suggestion_list" class="rh-listview">
+
+            </ul>
+        </div>
     </div>
 
     <script>
@@ -37,5 +44,7 @@
             );
         });
     </script>
+
+    <script src="https://kit.fontawesome.com/76ef5d807b.js"></script>
 </body>
 </html>
