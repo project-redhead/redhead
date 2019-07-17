@@ -113,7 +113,7 @@ public class UserDB extends DBManager {
                 if (option >= 0 && option < gameDB.getOptions(gameid).length) {
                     if (amount > 0) {
                         if (getPoints(id) >= amount) {
-                            remPoints(id, amount, "Wette eingereicht.");
+                            remPoints(id, amount, "Wette eingereicht");
 
                             return new Response(ResponseType.OK, new BasicDBObject("_id", gameDB.addBet(gameid, id, amount, option)));
                         }
