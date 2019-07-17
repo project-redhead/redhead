@@ -19,6 +19,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Redirect after Login to our Website and creating unexisting User
+ */
 @WebServlet(value = "/finishedlogin", name = "Finished Login")
 public class LoginSuccessServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

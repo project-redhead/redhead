@@ -14,10 +14,16 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Gets the actual meal of the Mensa at DHBW Karlsruhe
+ */
 public class MensaAPI {
 
     private int id = 33;
 
+    /**
+     * @param id ID of the wanted Mensa
+     */
     public MensaAPI(int id){
         this.id = id;
     }
@@ -26,6 +32,9 @@ public class MensaAPI {
         return request("/canteens/"+id);
     }
 
+    /**
+     * @return the actual meal at the wanted Mensa
+     */
     public DBObject getMeal(){
         String pattern = "yyyy-MM-dd";
         DateFormat df = new SimpleDateFormat(pattern);
@@ -35,6 +44,10 @@ public class MensaAPI {
 
     }
 
+    /**
+     * @param parameter URL of the Mensa-API to get wanted Meal
+     * @return actual Meal as DBObject
+     */
     private DBObject request(String parameter){
         try {
 

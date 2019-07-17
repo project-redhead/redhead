@@ -8,12 +8,22 @@ import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Requests the Meal for the actual day
+ */
 public class GetMealToday extends JsonRequest{
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public GetMealToday(RequestManager manager) {
         super("GetMealToday", manager);
     }
 
+    /**
+     * @param request HttpServletRequest
+     * @return meal of the actual day
+     */
     @Override
     public Response handleRequest(HttpServletRequest request) {
         MensaAPI api = new MensaAPI(33);

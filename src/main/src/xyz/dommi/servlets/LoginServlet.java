@@ -10,9 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Login to the Website by OAuth
+ */
 @WebServlet(value = "/login",name = "Login")
 public class LoginServlet extends HttpServlet {
 
+    /**
+     * Creating link for Discord Login
+     */
     public static OAuthBuilder builder = new OAuthBuilder(
             EnvironmentConfig.getDiscordConfig().getClientId(),
             EnvironmentConfig.getDiscordConfig().getClientSecret())
@@ -20,7 +26,7 @@ public class LoginServlet extends HttpServlet {
                 .setRedirectURI(EnvironmentConfig.getDiscordConfig().getRedirectUrl());
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.getWriter().append("Hello World from Post");
+        doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
