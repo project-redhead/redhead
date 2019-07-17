@@ -8,9 +8,15 @@ import xyz.dommi.requests.RequestManager;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Requests a new SuggestionBean
+ */
 public class SuggestionBeanRequest extends BeanRequest{
 
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public SuggestionBeanRequest(RequestManager manager) {
         super("SuggestionBean", manager);
     }

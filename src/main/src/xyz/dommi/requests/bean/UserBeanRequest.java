@@ -7,8 +7,14 @@ import xyz.dommi.requests.RequestManager;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Requests a new UserBean
+ */
 public class UserBeanRequest extends  BeanRequest{
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public UserBeanRequest(RequestManager manager) {
         super("UserBean", manager);
     }

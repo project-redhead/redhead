@@ -11,11 +11,22 @@ import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Requests a existing User
+ */
 public class UserInfo extends JsonRequest {
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public UserInfo(RequestManager manager){
         super("UserInfo", manager);
     }
+
+    /**
+     * @param request HttpServletRequest
+     * @return User as JSON-Object
+     */
     public Response handleRequest(HttpServletRequest request){
         String id = request.getParameter("id");
         if(id == null || id.equalsIgnoreCase("")) {

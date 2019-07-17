@@ -6,8 +6,14 @@ import xyz.dommi.requests.RequestManager;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Requests a new BetBean
+ */
 public class BetBeanRequest extends  BeanRequest{
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public BetBeanRequest(RequestManager manager) {
         super("BetBean", manager);
     }

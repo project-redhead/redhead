@@ -9,6 +9,10 @@ import xyz.dommi.db.DBManager;
 import xyz.dommi.requests.Response;
 import xyz.dommi.requests.ResponseType;
 
+/**
+ * Creates a new Game or get a existing Game from the Database
+ */
+
 public class BetGameBean {
     private String id;
     private String userId;
@@ -19,6 +23,10 @@ public class BetGameBean {
     }
 
 
+    /**
+     * @param id Id of the Game
+     * @param userId actual Client
+     */
     public BetGameBean(String id, String userId) {
         this.id = id;
         this.userId = userId;
@@ -29,6 +37,10 @@ public class BetGameBean {
         }
     }
 
+
+    /**
+     * @return Game or throws an exception if the Game does not exist
+     */
     public String getInfo(){
         if(id != null && !id.equals("")){
             DB db = DBConnection.getInstance().connect();
@@ -41,6 +53,9 @@ public class BetGameBean {
         return new Response(ResponseType.ERROR,"Id not valid").toString();
     }
 
+    /**
+     * @return a list of all existing Games
+     */
     public String getGameList(){
         DB db = DBConnection.getInstance().connect();
         BetGameDB gameDB = new BetGameDB(db);
@@ -60,6 +75,9 @@ public class BetGameBean {
         return answer;
     }
 
+    /**
+     * @param answer Clients chosen answer
+     */
     public void setAnswer(int answer) {
         this.answer = answer;
         DB db = DBConnection.getInstance().connect();

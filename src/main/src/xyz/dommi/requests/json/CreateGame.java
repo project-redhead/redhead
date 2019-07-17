@@ -13,12 +13,22 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Request the creation of a new BetGame
+ */
 public class CreateGame extends JsonRequest {
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public CreateGame(RequestManager manager) {
         super("CreateGame", manager);
     }
 
+    /**
+     * @param request HttpServletRequest
+     * @return id of the created Game
+     */
     public Response handleRequest(HttpServletRequest request) {
         String description = request.getParameter("description");
         String creatorId = HttpUtils.getUserIdFromJwt(request);

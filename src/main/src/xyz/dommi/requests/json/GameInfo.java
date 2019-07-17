@@ -12,11 +12,22 @@ import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Requests a existing Game
+ */
 public class GameInfo extends JsonRequest {
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public GameInfo(RequestManager manager){
         super("GameInfo", manager);
     }
+
+    /**
+     * @param request HttpServletRequest
+     * @return Game as JSON-Object
+     */
     public Response handleRequest(HttpServletRequest request){
         String id = request.getParameter("id");
 

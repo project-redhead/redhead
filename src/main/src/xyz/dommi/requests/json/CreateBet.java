@@ -10,12 +10,22 @@ import xyz.dommi.requests.ResponseType;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * Requests the creation of a new Bet
+ */
 public class CreateBet extends JsonRequest {
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public CreateBet(RequestManager manager){
         super("CreateBet", manager);
     }
 
+    /**
+     * @param request HttpServletRequest
+     * @return id of the created Bet
+     */
     public Response handleRequest(HttpServletRequest request) {
         String id = HttpUtils.getUserIdFromJwt(request);
         String gameId = request.getParameter("gameId");

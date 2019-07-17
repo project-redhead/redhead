@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Class used to execute Discord Webhooks with low effort
+ * Class used to execute Discord Webhooks
  */
 public class DiscordWebhook {
 
@@ -151,7 +151,7 @@ public class DiscordWebhook {
         stream.flush();
         stream.close();
 
-        connection.getInputStream().close(); //I'm not sure why but it doesn't work without getting the InputStream
+        connection.getInputStream().close();
         connection.disconnect();
     }
 

@@ -14,12 +14,22 @@ import xyz.dommi.requests.ResponseType;
 import javax.servlet.http.HttpServletRequest;
 import java.awt.*;
 
+/**
+ * Requests the creation of a new Suggestion
+ */
 public class CreateSuggestion extends JsonRequest {
 
+    /**
+     * @param manager Manger that contains this Request
+     */
     public CreateSuggestion(RequestManager manager) {
         super("CreateSuggestion", manager);
     }
 
+    /**
+     * @param request HttpServletRequest
+     * @return ID of the created Suggestion
+     */
     @Override
     public Response handleRequest(HttpServletRequest request) {
         String content = request.getParameter("content");

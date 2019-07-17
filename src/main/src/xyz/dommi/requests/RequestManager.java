@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Manges every Request
+ */
 public class RequestManager {
 
     private List<JsonRequest> jsonRequests;
@@ -18,6 +21,9 @@ public class RequestManager {
         init();
     }
 
+    /**
+     * Creates the correct Request
+     */
     private void init(){
         jsonRequests = new ArrayList<>();
         beanRequests = new ArrayList<>();
@@ -63,6 +69,10 @@ public class RequestManager {
 
     }
 
+    /**
+     * @param request HttpServletrequest
+     * @return Format of the request
+     */
     private RequestFormat getFormat(HttpServletRequest request){
         String format = request.getParameter("format");
         if(format == null ){
@@ -75,6 +85,10 @@ public class RequestManager {
         return  RequestFormat.JSON;
     }
 
+    /**
+     * @param request HttpServletRequest
+     * @return
+     */
     private Response handleJSONRequest(HttpServletRequest request){
         for(JsonRequest req : jsonRequests){
             String type = request.getParameter("type");
@@ -84,6 +98,7 @@ public class RequestManager {
         }
         return new Response(ResponseType.ERROR, "Type not found: " + request.getParameter("type"));
     }
+
     private void handleBeanRequest(HttpServletRequest request, HttpServletResponse response){
         for(BeanRequest req : beanRequests){
             String type = request.getParameter("type");
