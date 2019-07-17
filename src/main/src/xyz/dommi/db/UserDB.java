@@ -11,6 +11,9 @@ import xyz.dommi.requests.ResponseType;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Manages the user operations
+ */
 public class UserDB extends DBManager {
 
     public UserDB(DB db) {
@@ -65,15 +68,30 @@ public class UserDB extends DBManager {
         setIntByID(id, "points", points);
     }
 
+    /**
+     * @param id ID of the user
+     * @param points amount of points
+     * @param description description of the transaction
+     */
     public void addPoints(String id, int points, String description){
         setPoints(id, getPoints(id)+points);
         addTransaction(id, points, description);
     }
 
+    /**
+     * @param id ID of the user
+     * @param points amount of points
+     */
     public void addPoints(String id, int points){
         setPoints(id, getPoints(id)+points);
     }
 
+    /**
+     * @param id ID of the user
+     * @param points amount of points
+     * @param description Description of the transaction
+     * @return If amount of points is higher than the users points return false otherwise return true
+     */
     public boolean remPoints(String id, int points, String description){
         if(getPoints(id) < points){
             return false;
@@ -83,6 +101,11 @@ public class UserDB extends DBManager {
         return true;
     }
 
+    /**
+     * @param id ID of the user
+     * @param points
+     * @return If amount of points is higher than the users points return false otherwise return true
+     */
     public boolean remPoints(String id, int points){
         if(getPoints(id) < points){
             return false;
@@ -91,6 +114,10 @@ public class UserDB extends DBManager {
         return true;
     }
 
+    /**
+     * @param id ID of the user
+     * @return Response with new amount of points or throws an error response if not enough time expired
+     */
     public Response collectReward(String id){
         Date last = getLastReward(id);
         Date next = addHoursToJavaUtilDate(last,24);
@@ -106,6 +133,13 @@ public class UserDB extends DBManager {
         return new Response(ResponseType.ERROR,"Du kannst die Belohnung nur alle 24 Stunden einlösen!");
     }
 
+    /**
+     * @param id ID of the user
+     * @param gameid ID of the game
+     * @param amount Amount of bet points
+     * @param option picked option
+     * @return Response if the bet could be set or error response if you do not have enough points, you bet less than 1 point, you picked an invalid option, you already made a bet or you are the creator, the bet time has ended
+     */
     public Response addBet(String id, String gameid, int amount, int option) {
         BetGameDB gameDB = new BetGameDB(db);
         if (gameDB.isBetTimeValid(gameid)) {
@@ -128,12 +162,23 @@ public class UserDB extends DBManager {
         return new Response(ResponseType.ERROR, "The Bet time has ended!");
     }
 
+    /**
+     * @param id ID of the game
+     * @param description Description of the game
+     * @param options List of bet options
+     * @return true if all went through
+     */
     public boolean addGame(String id, String description, List<String> options) {
         BetGameDB gameDB = new BetGameDB(db);
         gameDB.createBetGame(description, id, options, null);
         return true;
     }
 
+    /**
+     * @param id ID of the transaction
+     * @param value value of the transaction
+     * @param description Description of the transaction
+     */
     public void addTransaction(String id, int value, String description){
 
         int _id = getTransactions(id).length();
@@ -145,14 +190,29 @@ public class UserDB extends DBManager {
         pushDBObjectByID(id, "transactions", transaction);
     }
 
+    /**
+     * @param id ID of the transaction
+     * @return transaction as JSONArray
+     */
     public JSONArray getTransactions(String id) {
         return getJSONArrayByID(id, "transactions");
     }
 
+    /**
+     * Checks if user exists
+     * @param id ID of the user
+     * @return true if user exists otherwise false
+     */
     public boolean userExists(String id) {
         return getObjectByID(id) != null;
     }
 
+    /**
+     * Creates a user
+     * @param id ID of the user
+     * @param name Name of the user
+     * @param email Email of the user
+     */
     public void createUser(String id, String name, String email) {
         if (!userExists(id)) {
             DBObject user = new BasicDBObject("_id", id)
