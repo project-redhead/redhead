@@ -7,6 +7,9 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import xyz.dommi.common.EnvironmentConfig;
 
+/**
+ * Creates the connection to the DB
+ */
 public class DBConnection {
     private DB db;
     private static DBConnection instance;
@@ -15,6 +18,9 @@ public class DBConnection {
 
     }
 
+    /**
+     * @return the DB or throws an exception if there is a problem with the connection
+     */
     public DB connect() {
         if(db == null){
             try {
@@ -30,6 +36,9 @@ public class DBConnection {
         return db;
     }
 
+    /**
+     * @return new connection to the DB
+     */
     public static DBConnection getInstance(){
         if(instance == null){
             instance = new DBConnection();
