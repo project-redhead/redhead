@@ -17,16 +17,14 @@
 <body>
     <div>
         <div bp="grid gap-none">
-            <div bp="1" id="sidebar">
-
-            </div>
+            <div bp="1" id="sidebar"></div>
             <div bp="11">
                 <div class="rh-widget">
                     <div class="rh-widget-header">
                         Stundenplan
                     </div>
                     <div class="rh-widget-content">
-                        <iframe src="https://rapla.dhbw-karlsruhe.de/rapla?page=calendar&user=eisenbiegler&file=TINF18B4" style="height: 100%; width: 100%">
+                        <embed src="https://rapla.dhbw-karlsruhe.de/rapla?page=calendar&user=eisenbiegler&file=TINF18B4" style="height: 100%; width: 100%">
                     </div>
                 </div>
             </div>

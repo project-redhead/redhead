@@ -17,9 +17,7 @@
 <body>
 <div>
     <div bp="grid gap-none">
-        <div bp="1" id="sidebar">
-
-        </div>
+        <div bp="1" id="sidebar"></div>
         <div bp="11">
             <div rh-js="wip"></div>
 
@@ -28,7 +26,7 @@
                     Bahn Fahrplan
                 </div>
                 <div class="rh-widget-content">
-                    <iframe src="https://marudor.de/routing/" style="height: 100%; width: 100%">
+                    <embed src="https://marudor.de/routing/" style="height: 100%; width: 100%">
                 </div>
             </div>
         </div>
