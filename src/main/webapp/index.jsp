@@ -28,7 +28,7 @@
             </div>
 
             <div bp="grid gap-none">
-                <div class="rh-widget" bp="6">
+                <div class="rh-widget" bp="6@lg 12@md">
                     <div class="rh-widget-header">
                         Wetten
                     </div>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <div class="rh-widget" bp="6">
+                <div class="rh-widget" bp="6@lg 12@md">
                     <div class="rh-widget-header">
                         Kummerkasten
                     </div>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
 
-                <div class="rh-widget" bp="6">
+                <div class="rh-widget" bp="6@lg 12@md">
                     <div class="rh-widget-header">
                         Stundenplan
                     </div>
@@ -58,7 +58,7 @@
                     </div>
                 </div>
 
-                <div class="rh-widget" bp="6">
+                <div class="rh-widget" bp="6@lg 12@md">
                     <div class="rh-widget-header">
                         Fahrplan
                     </div>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
 
-                <div class="rh-widget" bp="6">
+                <div class="rh-widget" bp="6@lg 12@md">
                     <div class="rh-widget-header">
                         Tägliche Belohnung
                     </div>

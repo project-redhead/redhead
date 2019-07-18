@@ -3,6 +3,7 @@
 div.rh-sidebar {
     height: 100vh;
     width: 100%;
+    min-width: 80px;
     background-color: #d31a1a;
     box-shadow: 6px 0 12px #000 30;
     display: flex;
