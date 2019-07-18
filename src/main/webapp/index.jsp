@@ -21,9 +21,15 @@
         <div id="widget-area" bp="11" class="rh-content">
             <div>
                 <h3>
-                    <span>Hey </span>
-                    <span rh-js="username"></span>
-                    <span> 👋</span>
+                    <span>
+                        <span>Hey </span>
+                        <span rh-js="username"></span>
+                        <span> 👋</span>
+                    </span>
+
+                    <span style="float:right">
+                        <span rh-js="points"></span>
+                    </span>
                 </h3>
             </div>
 
