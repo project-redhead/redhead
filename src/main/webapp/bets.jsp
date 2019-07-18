@@ -12,6 +12,7 @@ contentType="text/html;charset=UTF-8" language="java" %>
       crossorigin="anonymous"
     ></script>
     <script src="/assets/js/_sidebar.js"></script>
+    <script src="/assets/js/_auth.js"></script>
   </head>
   <body>
     <jsp:useBean
