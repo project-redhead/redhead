@@ -23,9 +23,10 @@ contentType="text/html;charset=UTF-8" language="java" %>
 
     <div bp="grid gap-none">
       <div bp="1" id="sidebar"></div>
-      <div bp="11" class="rh-content">
-        <div>
-          <h1>Wetten</h1>
+      <div bp="11">
+        <div rh-js="wip"></div>
+        <div class="rh-content">
+          <h1 style="margin:0px 10px">Wetten</h1>
 
           <div>
             <div class="rh-widget">
@@ -248,9 +249,9 @@ contentType="text/html;charset=UTF-8" language="java" %>
                   isCreator ? "(von dir!)" : "von " + creatorUser.name
                 }
                     </small><br/>
-      
+
                     ${game.description}
-      
+
                     <div class="rh-card" rh-id-options="${game._id}">
                       <div class="rh-card-content">
                         ${
@@ -284,6 +285,8 @@ contentType="text/html;charset=UTF-8" language="java" %>
         </script>
       </div>
     </div>
+
+    <script src="/assets/js/_wip.js"></script>
 
     <script src="https://kit.fontawesome.com/76ef5d807b.js"></script>
   </body>
