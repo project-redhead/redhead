@@ -6,6 +6,6 @@ div.alert {
 }
 
 div.alert.warning {
-	color: white;
+	color: black;
 	background-color: rgb(255, 166, 0);
 }
