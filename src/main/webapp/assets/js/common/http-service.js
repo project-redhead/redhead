@@ -50,6 +50,14 @@ async function postSuggestion(content) {
 
 
 // Games
+async function getGameList() {
+    let url = `/request?type=GameList`;
+    let res = await getHttp(url);
+
+    let body = await res.json();
+    return body;
+}
+
 async function getGame(id) {
     let url = `/request?type=GameInfo&id=${id}`;
     let res = await getHttp(url);
