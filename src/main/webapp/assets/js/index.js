@@ -33,6 +33,7 @@ function submitFeedback() {
 function init() {
     getUser().then(u => {
         $('[rh-js=username]').text(u.value.name);
+        $('[rh-js=points]').text(`${u.value.points} Punkte`);
     });
 }
 

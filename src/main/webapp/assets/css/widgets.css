@@ -1,8 +1,7 @@
 @import 'fonts.css';
 
 div.rh-widget {
-    margin: 10px;
-    background-color: #f3f3f3;
+    margin: 8px;
     min-width: 400px;
 }
 
@@ -17,6 +16,8 @@ div.rh-widget > div.rh-widget-header {
 
 div.rh-widget > div.rh-widget-content {
     padding: 16px;
+
+    background-color: #f3f3f3;
 
     border: #e0e0e0 solid 1px;
     border-radius: 0px 0px 5px 5px;

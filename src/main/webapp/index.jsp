@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="/assets/js/_sidebar.js"></script>
+    <script src="/assets/js/_auth.js"></script>
 </head>
 <body>
     <div bp="grid">
@@ -20,14 +21,20 @@
         <div id="widget-area" bp="11" class="rh-content">
             <div>
                 <h3>
-                    <span>Hey </span>
-                    <span rh-js="username"></span>
-                    <span> 👋</span>
+                    <span>
+                        <span>Hey </span>
+                        <span rh-js="username"></span>
+                        <span> 👋</span>
+                    </span>
+
+                    <span style="float:right">
+                        <span rh-js="points"></span>
+                    </span>
                 </h3>
             </div>
 
             <div bp="grid gap-none">
-                <div class="rh-widget" bp="6">
+                <div class="rh-widget" bp="6@lg 12@md">
                     <div class="rh-widget-header">
                         Wetten
                     </div>
@@ -37,7 +44,7 @@
                     </div>
                 </div>
 
-                <div class="rh-widget" bp="6">
+                <div class="rh-widget" bp="6@lg 12@md">
                     <div class="rh-widget-header">
                         Kummerkasten
                     </div>
@@ -48,7 +55,7 @@
                     </div>
                 </div>
 
-                <div class="rh-widget" bp="6">
+                <div class="rh-widget" bp="6@lg 12@md">
                     <div class="rh-widget-header">
                         Stundenplan
                     </div>
@@ -57,7 +64,7 @@
                     </div>
                 </div>
 
-                <div class="rh-widget" bp="6">
+                <div class="rh-widget" bp="6@lg 12@md">
                     <div class="rh-widget-header">
                         Fahrplan
                     </div>
@@ -66,7 +73,7 @@
                     </div>
                 </div>
 
-                <div class="rh-widget" bp="6">
+                <div class="rh-widget" bp="6@lg 12@md">
                     <div class="rh-widget-header">
                         Tägliche Belohnung
                     </div>
