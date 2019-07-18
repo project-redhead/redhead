@@ -26,7 +26,7 @@
                         Stundenplan
                     </div>
                     <div class="rh-widget-content">
-                        <embed src="https://rapla.dhbw-karlsruhe.de/rapla?page=calendar&user=eisenbiegler&file=TINF18B4" style="height: 100%; width: 100%">
+                        <iframe src="https://rapla.dhbw-karlsruhe.de/rapla?page=calendar&user=eisenbiegler&file=TINF18B4" style="height: 100%; width: 100%">
                     </div>
                 </div>
             </div>
