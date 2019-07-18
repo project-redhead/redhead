@@ -39,8 +39,9 @@
                         Wetten
                     </div>
                     <div class="rh-widget-content">
-                        Lädt...
-                        <a class="rh-button" href="/request?type=BetGameBean&format=bean&redirect=/bets.jsp">Zur Übersicht</a>
+                        <div rh-js="game-hero">
+
+                        </div>
                     </div>
                 </div>
 
@@ -49,9 +50,17 @@
                         Kummerkasten
                     </div>
                     <div class="rh-widget-content">
-                        <input type="text" id="inputFeedback" />
-                        <a class="rh-button" href="#" onclick="submitFeedback(this)">Absenden</a>
-                        <a class="rh-button" href="/request?type=SuggestionBean&format=bean&redirect=/suggestions.jsp">Einsendungen</a>
+                        <div>
+                            <label for="inputFeedback">Dein Anliegen</label>
+                            <input type="text" class="block" id="inputFeedback" name="inputFeedback" />
+                        </div>
+
+                        <br/>
+
+                        <div>
+                            <a class="rh-button small" href="#" onclick="submitFeedback(this)">Absenden</a>
+                            <a class="rh-button small" href="/request?type=SuggestionBean&format=bean&redirect=/suggestions.jsp">Einsendungen</a>
+                        </div>
                     </div>
                 </div>
 

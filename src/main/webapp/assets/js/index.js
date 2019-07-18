@@ -15,26 +15,43 @@ function submitFeedback() {
     });
 }
 
-    async function claimReward(){
+async function claimReward(){
 
-        var body = await postReward();
-        if(body.status == "OK"){
-            Swal.fire({
-                text: "Du hast "+body.value + " Punkte erhalten"
-            });
-        }else{
-            Swal.fire({
-                text: body.value,
-                type: 'error'
-            });
-        }
+    var body = await postReward();
+    if(body.status == "OK"){
+        Swal.fire({
+            text: "Du hast "+body.value + " Punkte erhalten"
+        });
+    }else{
+        Swal.fire({
+            text: body.value,
+            type: 'error'
+        });
     }
+}
 
 function init() {
     getUser().then(u => {
         $('[rh-js=username]').text(u.value.name);
         $('[rh-js=points]').text(`${u.value.points} Punkte`);
     });
+
+    getGameList().then(l => {
+        let latestGame = l.value.reverse()[0];
+
+        getUser(latestGame.creator).then(u => {
+            $('[rh-js=game-hero]').html(`
+                <div>
+                    <div>
+                        <b>Aktuelle Wette von ${u.value.name}:</b>
+                        <br /> ${latestGame.description}
+                    </div>
+                    <br />
+                    <a class="rh-button small">Zu den Wetten</a>
+                </div>
+            `);
+        })
+    })
 }
 
 init();
