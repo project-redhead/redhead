@@ -47,7 +47,7 @@ function init() {
                         <br /> ${latestGame.description}
                     </div>
                     <br />
-                    <a class="rh-button small">Zu den Wetten</a>
+                    <a class="rh-button small" href="/request?type=BetGameBean&format=bean&redirect=/bets.jsp">Zu den Wetten</a>
                 </div>
             `);
         })

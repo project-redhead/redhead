@@ -2,10 +2,16 @@ $(document).ready(() => {
 	// Attach sidebar
 	$('#sidebar').append(`
 		<div class="rh-sidebar">
+			<div class="rh-sidebar-action-item" rh-link="/bahn.jsp">
+				<span class="border"></span>
+
+				<i class="rh-icon fas fa-train fa-1x"></i>
+			</div>
+
 			<div class="rh-sidebar-action-item" rh-link="/request?type=BetGameBean&format=bean&redirect=/bets.jsp">
 				<span class="border"></span>
 
-				<i class="rh-icon fas fa-trophy fa-2x"></i>
+				<i class="rh-icon fas fa-trophy fa-1x"></i>
 			</div>
 
 			<div class="rh-sidebar-action-item" rh-link="/">
@@ -17,7 +23,13 @@ $(document).ready(() => {
 			<div class="rh-sidebar-action-item" rh-link="/request?type=SuggestionBean&format=bean&redirect=/suggestions.jsp">
 				<span class="border"></span>
 
-				<i class="rh-icon fas fa-inbox fa-2x"></i>
+				<i class="rh-icon fas fa-inbox fa-1x"></i>
+			</div>
+
+			<div class="rh-sidebar-action-item" rh-link="/schedule.jsp">
+				<span class="border"></span>
+
+				<i class="rh-icon fas fa-calendar fa-1x"></i>
 			</div>
 		</div>
 	`);
