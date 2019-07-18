@@ -1,0 +1,11 @@
+div.alert {
+	display: block;
+	width: 100%;
+	padding: 8px;
+	font-size: 12px;
+}
+
+div.alert.warning {
+	color: white;
+	background-color: rgb(255, 166, 0);
+}
