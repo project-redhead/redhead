@@ -57,7 +57,7 @@ function init() {
         if (data.status != 'OK') return;
 
         data.value.forEach(m => {
-            $('ul[rh-js=mensa-list]').append(`<li>${m.name} (${m.prices.student})</li>`);
+            $('ul[rh-js=mensa-list]').append(`<li>${m.name} (${m.prices.students})</li>`);
         });
     })
 }
