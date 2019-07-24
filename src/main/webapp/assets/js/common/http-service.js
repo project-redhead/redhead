@@ -95,9 +95,21 @@ async function postBet(gameId, points, optionIndex) {
         return true;
     else
         return body;
-}// Reward
+}
+
+
+// Reward
 async function postReward() {
     let res = await postHttp(`/request?type=ClaimReward`);
+
+    let body = await res.json();
+    return body;
+}
+
+
+// Get Meals
+async function getMealsOfToday() {
+    let res = await getHttp(`/request?type=GetMealToday`);
 
     let body = await res.json();
     return body;

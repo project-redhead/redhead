@@ -51,6 +51,14 @@ function init() {
                 </div>
             `);
         })
+    });
+
+    getMealsOfToday().then(data => {
+        if (data.status != 'OK') return;
+
+        data.value.forEach(m => {
+            $('ul[rh-js=mensa-list]').append(`<li>${m.name} (${m.prices.student})</li>`);
+        });
     })
 }
 
