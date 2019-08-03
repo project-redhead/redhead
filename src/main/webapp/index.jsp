@@ -2,18 +2,9 @@
 change this template use File | Settings | File Templates. --%> <%@ page
 contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>Project Redhead</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/_redhead.css" />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="/assets/js/_sidebar.js"></script>
-    <script src="/assets/js/_auth.js"></script>
-  </head>
+  <jsp:include page="partials/head.jsp">
+    <jsp:param name="title" value="Home"/>
+  </jsp:include>
   <body>
     <div bp="grid gap-none">
       <div id="sidebar" bp="1"></div>
@@ -119,11 +110,9 @@ contentType="text/html;charset=UTF-8" language="java" %>
       </div>
     </div>
 
-    <script src="/assets/js/_wip.js"></script>
 
-    <script src="/assets/js/common/http-service.js"></script>
     <script src="/assets/js/index.js"></script>
 
-    <script src="https://kit.fontawesome.com/76ef5d807b.js"></script>
+    <jsp:include page="partials/footer.jsp" />
   </body>
 </html>

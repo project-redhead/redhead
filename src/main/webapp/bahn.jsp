@@ -7,13 +7,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Project Redhead - Schedule</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/_redhead.css" />
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="/assets/js/_sidebar.js"></script>
-</head>
+<jsp:include page="partials/head.jsp">
+    <jsp:param name="title" value="Fahrplan"/>
+</jsp:include>
 <body>
 <div>
     <div bp="grid gap-none">
@@ -31,11 +28,8 @@
             </div>
         </div>
     </div>
-
-    <script src="/assets/js/_wip.js"></script>
-
-    <script src="https://kit.fontawesome.com/76ef5d807b.js"></script>
 </div>
 
+<jsp:include page="partials/footer.jsp" />
 </body>
 </html>
