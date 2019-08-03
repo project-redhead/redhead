@@ -105,6 +105,15 @@ contentType="text/html;charset=UTF-8" language="java" %>
                 >
               </div>
             </div>
+
+            <div class="rh-widget" bp="6@lg 12@md">
+              <div class="rh-widget-header">
+                Heute in der Mensa
+              </div>
+              <div class="rh-widget-content" rh-js="mensa-widget">
+                <ul rh-js="mensa-list"></ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
