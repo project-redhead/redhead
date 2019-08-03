@@ -42,6 +42,6 @@
         });
     </script>
 
-    <script src="https://kit.fontawesome.com/76ef5d807b.js"></script>
+    <jsp:include page="partials/footer.jsp" />
 </body>
 </html>

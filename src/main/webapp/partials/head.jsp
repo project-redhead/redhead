@@ -8,4 +8,6 @@
 
     <script src="/assets/js/_sidebar.js"></script>
     <script src="/assets/js/_auth.js"></script>
+
+    <script src="/assets/js/common/http-service.js"></script>
 </head>

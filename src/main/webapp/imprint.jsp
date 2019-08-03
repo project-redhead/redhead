@@ -79,11 +79,8 @@
             </div>
         </div>
     </div>
-
-    <script src="/assets/js/_wip.js"></script>
-
-    <script src="https://kit.fontawesome.com/76ef5d807b.js"></script>
 </div>
 
+<jsp:include page="partials/footer.jsp" />
 </body>
 </html>

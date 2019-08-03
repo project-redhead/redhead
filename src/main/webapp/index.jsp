@@ -110,11 +110,9 @@ contentType="text/html;charset=UTF-8" language="java" %>
       </div>
     </div>
 
-    <script src="/assets/js/_wip.js"></script>
 
-    <script src="/assets/js/common/http-service.js"></script>
     <script src="/assets/js/index.js"></script>
 
-    <script src="https://kit.fontawesome.com/76ef5d807b.js"></script>
+    <jsp:include page="partials/footer.jsp" />
   </body>
 </html>
