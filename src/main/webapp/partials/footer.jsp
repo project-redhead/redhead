@@ -8,7 +8,10 @@
 <div>
     <div id="footer">
         2019 &copy; Team REDHEAD <br/>
-        <a href="/imprint.jsp">Impressum</a> &middot; <a href="/help.jsp">Hilfe</a>
+
+        <a href="/transactions.jsp">Transaktionen</a> &middot;
+        <a href="/imprint.jsp">Impressum</a> &middot;
+        <a href="/help.jsp">Hilfe</a>
     </div>
 
     <script src="https://kit.fontawesome.com/76ef5d807b.js"></script>

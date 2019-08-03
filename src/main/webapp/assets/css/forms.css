@@ -8,3 +8,11 @@ input.block {
     display: block;
     width: 100%;
 }
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}

@@ -1,4 +1,4 @@
-var IS_WIP = true;
+var IS_WIP = false;
 
 function initWip() {
 	if (!IS_WIP) return;
