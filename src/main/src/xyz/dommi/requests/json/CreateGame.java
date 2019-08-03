@@ -52,14 +52,17 @@ public class CreateGame extends JsonRequest {
             for (String option : options.split(",")) {
                 optionList.add(option);
             }
-
-            if (timelimit != null && !timelimit.equals("")) {
-                return gameDB.createBetGame(description, creatorId, optionList, new Date(Date.parse(timelimit)));
-            } else {
-                return gameDB.createBetGame(description, creatorId, optionList, null);
+            if(optionList.size() >= 2){
+                if (timelimit != null && !timelimit.equals("")) {
+                    return gameDB.createBetGame(description, creatorId, optionList, new Date(Date.parse(timelimit)));
+                } else {
+                    return gameDB.createBetGame(description, creatorId, optionList, null);
+                }
+            }else{
+                return new Response(ResponseType.ERROR, "Du musst mindestens 2 Optionen angeben!");
             }
         } catch (Exception e) {
-            return new Response(ResponseType.ERROR, e.getMessage());
+            return new Response(ResponseType.ERROR, "Ein Fehler ist aufgetreten!");
         }
     }
 }
