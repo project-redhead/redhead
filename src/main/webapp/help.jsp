@@ -7,7 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<jsp:include page="partials/head.jsp" />
+<jsp:include page="partials/head.jsp">
+    <jsp:param name="title" value="Hilfe"/>
+</jsp:include>
 <body>
 <div>
     <div bp="grid gap-none">

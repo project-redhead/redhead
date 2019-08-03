@@ -1,0 +1,20 @@
+#footer {
+    background-color: #1f1f1f;
+    color: #cacaca;
+    display: block;
+    width: 100%;
+
+    margin-top: 50px;
+    padding: 20px 20px 60px;
+    font-size: 10pt;
+
+    text-align: right;
+}
+
+#footer > a {
+    color: #d31a1a;
+}
+
+#footer > a:visited {
+    color: #d31a1a;
+}
