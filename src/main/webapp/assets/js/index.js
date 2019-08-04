@@ -54,7 +54,10 @@ function init() {
     });
 
     getMealsOfToday().then(data => {
-        if (data.status != 'OK') return;
+        if (data.value.length == 0 || data.status != 'OK') {
+            $('[rh-js=mensa-list]').html(`<p><small><center>Heute wird nichts in der Mensa angeboten.</center></small></p>`);
+            return;
+        }
 
         data.value.forEach(m => {
             $('ul[rh-js=mensa-list]').append(`<li>${m.name} (${m.prices.students})</li>`);
