@@ -54,8 +54,8 @@ contentType="text/html;charset=UTF-8" language="java" %>
                         $("#btnAddOption").click(handler => {
                           $("[rh-id=options_container]").append(
                             `<div game-option-container>
-                                      <input game-option class="block" type="text">
-                                    </div>`
+                              <input game-option class="block" type="text">
+                            </div>`
                           );
                         });
                       </script>
@@ -205,7 +205,7 @@ contentType="text/html;charset=UTF-8" language="java" %>
 
             // Init
             gameList = JSON.parse(
-              '<jsp:getProperty name="bean" property="gameList"/>'
+              `<jsp:getProperty name="bean" property="gameList"/>`
             );
             console.log("Game list fetched", gameList);
 
