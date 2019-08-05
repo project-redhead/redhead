@@ -59,18 +59,21 @@
                 <h3>Wetten-Seite</h3>
                 <p>
                     <h4>"Neue Wette erstellen":</h4>
-                1. Eingabemöglichkeit für den Namen der Wette. -> Name der Wette eingeben.
-                2. Wettoptionen einfügen. Durch "Neue Option" kann eine weiter Option eingefügt werden.-> Für neue Wettoption "Neue Option" auswählen (Mehr als eine Wettoption angeben, an-sonsten kann keine Wette erstellt werden).
-                3. "Wette eröffnen"-Button stellt die Wette online. -> Button betätigen.
+                    <ol>
+                        <li>Eingabemöglichkeit für den Namen der Wette. -> Name der Wette eingeben.</li>
+                        <li>Wettoptionen einfügen. Durch "Neue Option" kann eine weiter Option eingefügt werden.-> Für neue Wettoption "Neue Option" auswählen (Mehr als eine Wettoption angeben, an-sonsten kann keine Wette erstellt werden).</li>
+                        <li>"Wette eröffnen"-Button stellt die Wette online. -> Button betätigen.</li>
+                    </ol>
                 </p>
                 <p>
                     <h4>Wetten-Übersicht:</h4>
                 Wette:
-                1. Erstellungsdatum der Wette + Ersteller der Wette.
-                2. Name der Wette.
-                3. Auswahl der Wett-Optionen. Durch wählen einer Option öffnet sich eine Eingabemöglich-keit, in der man die Anzahl der Punkte angeben kann, die gewettet werden sollen. 
-                    Durch den "Wette einreichen"-Button kann die Wette abgeschickt werden. Durch den "Cancel"-Button wird der Vorgang abgebrochen.
-                4. Anzahl der Leute, die auf die Wette gewettet haben. Unterhalb der beiden Buttons wird die verfügbare Anzahl an Punkten für diesen Account angegeben.
+                <ol>
+                    <li>Erstellungsdatum der Wette + Ersteller der Wette.</li>
+                    <li>Name der Wette.</li>
+                    <li>Auswahl der Wett-Optionen. Durch wählen einer Option öffnet sich eine Eingabemöglich-keit, in der man die Anzahl der Punkte angeben kann, die gewettet werden sollen. Durch den "Wette einreichen"-Button kann die Wette abgeschickt werden. Durch den "Cancel"-Button wird der Vorgang abgebrochen.</li>
+                    <li>Anzahl der Leute, die auf die Wette gewettet haben. Unterhalb der beiden Buttons wird die verfügbare Anzahl an Punkten für diesen Account angegeben.</li>
+                </ol>
 
                 </p>
             </p>
@@ -78,14 +81,18 @@
                     <h3>Kummerkasten Seite</h3>
                 <p>
                     <h4>Problem einreichen:</h4>
-                1. Auf der Startseite im Kummerkasten-Widget das Problem eingeben.
-                2. "Absenden"-Button betätigen.
-                3. Nun wird das Problem auf der Kummerkasten-Seite angezeigt und kann explizit von den Kurssprechern angegangen werden.
+                    <ol>
+                        <li>Auf der Startseite im Kummerkasten-Widget das Problem eingeben.</li>
+                        <li>"Absenden"-Button betätigen.</li>
+                        <li>Nun wird das Problem auf der Kummerkasten-Seite angezeigt und kann explizit von den Kurssprechern angegangen werden.</li>
+                    </ol>
                 </p>
                 <p>
                     <h4>Problem:</h4>
-                1. Erstellungsdatum des Problems (Anonym).
-                2. Problemtext
+                    <ol>
+                        <li>Erstellungsdatum des Problems (Anonym).</li>
+                        <li>Problemtext</li>
+                    </ol>
                 </p>
             </p>
             <p>
