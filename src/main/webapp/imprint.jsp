@@ -26,8 +26,24 @@
                 email@test.com
             </div>
             <hr />
+			<h1> Impressum </h1>
+				<h2>EU-Streitschlichtung</h2>
+				Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die Online-Streitbeilegungsplattform (OS-Plattform) informieren.
+				Verbraucher haben die Möglichkeit, Beschwerden an die Online Streitbeilegungsplattform der Europäischen Kommission unter http://ec.europa.eu/odr?tid=321113117 zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb in unserem Impressum.
 
-            <h1>Datenschutzerklärung</h1>
+				Wir möchten Sie jedoch darauf hinweisen, dass wir nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+				<br/> <br/>
+				<h2>Haftung für Inhalte dieser Website</h2>
+				Wir entwickeln die Inhalte dieser Webseite ständig weiter und bemühen uns korrekte und aktuelle Informationen bereitzustellen. Laut Telemediengesetz (TMG) §7 (1) sind wir als Diensteanbieter für eigene Informationen, die wir zur Nutzung bereitstellen, nach den allgemeinen Gesetzen verantwortlich. Leider können wir keine Haftung für die Korrektheit aller Inhalte auf dieser Webseite übernehmen, speziell für jene die seitens Dritter bereitgestellt wurden. Als Diensteanbieter im Sinne der §§ 8 bis 10 sind wir nicht verpflichtet, die von ihnen übermittelten oder gespeicherten Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+
+				Unsere Verpflichtungen zur Entfernung von Informationen oder zur Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen aufgrund von gerichtlichen oder behördlichen Anordnungen bleiben auch im Falle unserer Nichtverantwortlichkeit nach den §§ 8 bis 10 unberührt.
+
+				Sollten Ihnen problematische oder rechtswidrige Inhalte auffallen, bitte wir Sie uns umgehend zu kontaktieren, damit wir die rechtswidrigen Inhalte entfernen können. Sie finden die Kontaktdaten im Impressum.
+				<br/> <br/>
+			<h1>Datenschutzerklärung</h1>
+			Wir haben diese Datenschutzerklärung (Fassung 05.08.2019-321113117) verfasst, um Ihnen gemäß der Vorgaben der Datenschutz-Grundverordnung (EU) 2016/679 zu erklären, welche Informationen wir sammeln, wie wir Daten verwenden und welche Entscheidungsmöglichkeiten Sie als Besucher dieser Webseite haben.
+
+			Leider liegt es in der Natur der Sache, dass diese Erklärungen sehr technisch klingen, wir haben uns bei der Erstellung jedoch bemüht die wichtigsten Dinge so einfach und klar wie möglich zu beschreiben.
             <div>
                 <h2>Auskunfts- und Widerrufsrecht</h2>
                 Sie haben jederzeit das Recht, sich unentgeltlich und unverzüglich über die zu Ihrer Person erhobenen Daten zu erkundigen. Ebenfalls können Sie Ihre Zustimmung zur Verwendung Ihrer angegebenen persönlichen Daten mit Wirkung für die Zukunft widerrufen. Hierfür wenden Sie sich bitte an den im Impressum angegebenen Diensteanbieter.
@@ -40,34 +56,25 @@
                 Die Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich untersagt. Ausgenommen hiervon sind bestehende Geschäftsbeziehungen bzw. es liegt Ihnen eine entsprechende Einwilligung von uns vor.
                 Die Anbieter und alle auf dieser Website genannten Dritten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen vor. Gleiches gilt für die kommerzielle Verwendung und Weitergabe der Daten.
                 <br/> <br/>
+				<h2>Automatische Datenspeicherung</h2>
+				Wenn Sie heutzutage Webseiten besuchen, werden gewisse Informationen automatisch erstellt und gespeichert, so auch auf dieser Webseite.
 
-                <h2>Google Analytics</h2>
-                Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. ("Google"), 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google Analytics verwendet sog. "Cookies" (Textdateien), die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Website, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die vollständige IP-Adresse an einen Server von Google in den USA übertragen und dort anonymisiert. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.
-                Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Add-on herunterladen und installieren: http://tools.google.com/dlpage/gaoptout?hl=de. Das Browser-Add-on zur Deaktivierung von Google Analytics ist mit Chrome, Internet Explorer 8 bis 11, Safari, Firefox und Opera kompatibel.
-                Weitere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter folgenden Links: http://www.google.com/analytics/terms/de.html und https://www.google.de/intl/de/policies/.
+				Wenn Sie unsere Webseite so wie jetzt gerade besuchen, speichert unser Webserver (Computer auf dem diese Webseite gespeichert ist) automatisch Daten wie <br>
+
+					die Adresse (URL) der aufgerufenen Webseite
+					Browser und Browserversion
+					das verwendete Betriebssystem
+					die Adresse (URL) der zuvor besuchten Seite (Referrer URL)
+					den Hostname und die IP-Adresse des Geräts von welchem aus zugegriffen wird
+					Datum und Uhrzeit <br>
+
+				in Dateien (Webserver-Logfiles). <br>
+
+				In der Regel werden Webserver-Logfiles zwei Wochen gespeichert und danach automatisch gelöscht. Wir geben diese Daten nicht weiter, können jedoch nicht ausschließen, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten eingesehen werden.
+				Die Rechtsgrundlage besteht nach Artikel 6  Absatz 1 f DSGVO (Rechtmäßigkeit der Verarbeitung) darin, dass berechtigtes Interesse daran besteht, den fehlerfreien Betrieb dieser Webseite durch das Erfassen von Webserver-Logfiles zu ermöglichen.
                 <br/> <br/>
-
-                <h2>Google Adsense</h2>
-                Diese Website benutzt Google Adsense, einen Werbeanzeigendienst der Google Inc. ("Google"), 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Google Adsense verwendet sog. "Cookies" (Textdateien), die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Für die Auswertung verwendet Google Adsense zusätzlich sog. "Web Beacons" (kleine unsichtbare Grafiken), welche z. B. Informationen wie den Besucherverkehr auf der Seite erzeugen. Diese gesammelten Informationen (einschließlich Ihrer IP-Adresse) werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Die Informationen verwendet Google, um Ihre Nutzung der Website im Hinblick auf die Werbeanzeigen zu analysieren und so Auswertungen über die Websiteaktivitäten und Werbeanzeigen für die Betreiber der Website vornehmen zu können sowie weitere Dienstleistungen in Bezug auf die Websitenutzung und Internetnutzung erbringen zu können. Die von Google gesammelten Informationen können an Dritte, durch Vertrag oder durch gesetzliche Vorschriften, von Google weitergegeben werden. Google wird Ihre IP-Adresse nicht mit anderen von Ihnen gespeicherten Daten verknüpfen.
-                Sie können die Speicherung der Cookies und die Anzeige der Web Beacons durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich nutzen können.
-                Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.
-                <br/> <br/>
-
-                <h2>Datenschutzerklärung Google Plus</h2>
-                Auf dieser Website sind Plugins ("g+1" etc.) des Social-Networks Google Plus der Google Inc. ("Google"), 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA implementiert. Die +1 Schaltfläche ermöglicht es Ihnen als registrierter Google-Plus-Nutzer Ihr Interesse an unseren Webinhalten bei Google Plus zu veröffentlichen. Bei Benutzung der Schaltfläche speichert Google die Information, dass Sie für einen bestimmten Webinhalt ein "+1" gegeben haben sowie Informationen über die Site, die sich angesehen haben. Die von Ihnen vergebenen "+1" können zusammen mit Ihren Angaben Ihres Benutzerprofils bei Google (ggf. auch mit Ihrem Namen und Foto) bei Google Plus und anderen Google-Diensten ausgegeben werden. Weitere Informationen zur Datenerhebung, der Verarbeitung und Nutzung der Daten sowie zum Datenschutz durch Google erhalten Sie unter: https://www.google.com/intl/de/policies/privacy/.
-                Datenschutzerklärung Google Remarketing und ähnliche Zielgruppen
-                Auf dieser Website sind Plugins für die Google Remarketing bzw. ähnliche Zielgruppen Funktionen der Google Inc. ("Google"), 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA implementiert. Hierfür werden sog. "Cookies" (Textdateien), die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen, verwendet. Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Es ist somit möglich, sie auf anderen Websites im "Google Display-Netzwerk" zielgerichtet mit personalisierter und interessensbezogener Anzeigenwerbung anzusprechen. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Add-on herunterladen und installieren: https://www.google.com/settings/ads/plugin?hl=de. Das Browser-Add-on zur Deaktivierung von Google Analytics ist mit Chrome, Internet Explorer, Safari, und Firefox kompatibel. Darüber hinaus können Sie die Verwendung von Cookies durch Drittanbieter deaktivieren. Hierfür folgen Sie bitte den Anweisungen der Network Advertising Initiative (http://www.networkadvertising.org/choices/).
-                Weitere Informationen zu Nutzungsbedingungen und Datenschutz von Google Remarketing finden Sie unter folgendem Link:http://www.google.com/policies/technologies/ads/.
-                <br/> <br/>
-
-                <h2>Datenschutzerklärung Google AdWords Conversion-Tracking</h2>
-                Auf dieser Website ist das Plugin für die "Google AdWords Conversion-Tracking"-Funktion der Google Inc. ("Google"), 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA implementiert. Hierfür werden sog. "Cookies" (Textdateien), die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen, wenn Sie auf eine Anzeige von Google geklickt haben, verwendet. Die durch das Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden für 90 Tage gespeichert. Personalisierte Daten werden dabei nicht gespeichert. Für die Gültigkeitsdauer können Google und wir als Betreiber erkennen, dass Sie eine Anzeige angeklickt haben und zu einer entsprechenden Zielsite gelangt sind. Die gespeicherten Cookies können nicht über mehrere Websites von verschiedenen AdWords-Kunden verfolgt werden. Es werden im Google AdWords-Dienst sog. Conversion-Statistiken erhoben, welche die Anzahl der Nutzer, die auf eine Anzeige geklickt haben, erfasst. Zusätzlich wird beziffert, wie viele Nutzer zu einer "Conversion-Tag-Zielsite" verlinkt wurden.
-                Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich nutzen können.
-                Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.
-                Weitere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter folgenden Links: https://support.google.com/adwords/answer/93148?ctx=tltp und http://www.google.de/policies/privacy/.
-                 <br/> <br/>
-
-                <h2>Disclaimer (Haftungsausschluss)</h2>
+				
+				<h2>Disclaimer (Haftungsausschluss)</h2>
                 1. Haftung für Inhalte
                 Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
                 2. Haftung für Links
@@ -75,8 +82,92 @@
                 3. Urheberrecht
                 Die durch die Diensteanbieter, deren Mitarbeiter und beauftragte Dritte erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der vorherigen schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden derartige Inhalte umgehend entfernen.
                  <br/> <br/>
-                Dieses Impressum wurde mit Hilfe des Impressum-Generators von HENSCHE Rechtsanwälte erstellt.
-            </div>
+				
+				<h2>Cookies</h2>
+				Unsere Website verwendet HTTP-Cookies um nutzerspezifische Daten zu speichern.
+				Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit Sie die folgende Datenschutzerklärung besser verstehen.
+				<br>
+				<h3>Was genau sind Cookies?</h3>
+				Immer wenn Sie durch das Internet surfen, verwenden Sie einen Browser. Bekannte Browser sind beispielsweise Chrome, Safari, Firefox, Internet Explorer und Microsoft Edge. Die meisten Webseiten speichern kleine Text-Dateien in Ihrem Browser. Diese Dateien nennt man Cookies.
+				<br>
+				Eines ist nicht von der Hand zu weisen: Cookies sind echt nützliche Helferlein. Fast alle Webseiten verwenden Cookies. Genauer gesprochen sind es HTTP-Cookies, da es auch noch anderer Cookies für andere Anwendungsbereiche gibt. HTTP-Cookies sind kleine Dateien, die von unserer Website auf Ihrem Computer gespeichert werden. Diese Cookie-Dateien werden automatisch im Cookie-Ordner, quasi dem “Hirn” Ihres Browsers, untergebracht. Ein Cookie besteht aus einem Namen und einem Wert. Bei der Definition eines Cookies müssen zusätzlich ein oder mehrere Attribute angegeben werden.
+				<br>
+				Cookies speichern gewisse Nutzerdaten von Ihnen, wie beispielsweise Sprache oder persönliche Seiteneinstellungen. Wenn Sie unsere Seite wieder aufrufen, übermittelt Ihr Browser die „userbezogenen“ Informationen an unsere Seite zurück. Dank der Cookies weiß unsere Website, wer Sie sind und bietet Ihnen Ihre gewohnte Standardeinstellung. In einigen Browsern hat jedes Cookie eine eigene Datei, in anderen wie beispielsweise Firefox sind alle Cookies in einer einzigen Datei gespeichert.
+				<br>
+				Es gibt sowohl Erstanbieter Cookies als auch Drittanbieter-Cookies. Erstanbieter-Cookies werden direkt von unserer Seite erstellt, Drittanbieter-Cookies werden von Partner-Webseiten (z.B. Google Analytics) erstellt. Jedes Cookie ist individuell zu bewerten, da jedes Cookie andere Daten speichert. Auch die Ablaufzeit eines Cookies variiert von ein paar Minuten bis hin zu ein paar Jahren. Cookies sind keine Software-Programme und enthalten keine Viren, Trojaner oder andere „Schädlinge“. Cookies können auch nicht auf Informationen Ihres PCs zugreifen.
+				
+				<h3>Welche Arten von Cookies gibt es?</h3>
+				Die Frage welche Cookies wir im Speziellen verwenden, hängt von den verwendeten Diensten ab und wird in der folgenden Abschnitten der Datenschutzerklärung geklärt. An dieser Stelle möchten wir kurz auf die verschiedenen Arten von HTTP-Cookies eingehen.
+				<br>
+				Man kann 4 Arten von Cookies unterscheiden:
+				<br>
+				<h4>Unbedingt notwendige Cookies: <h/4>
+				Diese Cookies sind nötig, um grundlegende Funktionen der Website sicherzustellen. Zum Beispiel braucht es diese Cookies, wenn ein User ein Produkt in den Warenkorb legt, dann auf anderen Seiten weitersurft und später erst zur Kasse geht. Durch diese Cookies wird der Warenkorb nicht gelöscht, selbst wenn der User sein Browserfenster schließt.
+				<br>
+				<h4>Funktionelle Cookies: </h4>
+				Diese Cookies sammeln Infos über das Userverhalten und ob der User etwaige Fehlermeldungen bekommt. Zudem werden mithilfe dieser Cookies auch die Ladezeit und das Verhalten der Website bei verschiedenen Browsern gemessen.
+				<br>
+				<h4>Zielorientierte Cookies: </h4>
+				Diese Cookies sorgen für eine bessere Nutzerfreundlichkeit. Beispielsweise werden eingegebene Standorte, Schriftgrößen oder Formulardaten gespeichert.
+				<br>
+				<h4>Werbe-Cookies: </h4>
+				Diese Cookies werden auch Targeting-Cookies genannt. Sie dienen dazu dem User individuell angepasste Werbung zu liefern. Das kann sehr praktisch, aber auch sehr nervig sein.
+				<br>
+				Üblicherweise werden Sie beim erstmaligen Besuch einer Webseite gefragt, welche dieser Cookiearten Sie zulassen möchten. Und natürlich wird diese Entscheidung auch in einem Cookie gespeichert.
+				<br>
+				<h3>Wie kann ich Cookies löschen?</h3>
+
+				Wie und ob Sie Cookies verwenden wollen, entscheiden Sie selbst. Unabhängig von welchem Service oder welcher Website die Cookies stammen, haben Sie immer die Möglichkeit Cookies zu löschen, nur teilweise zuzulassen oder zu deaktivieren. Zum Beispiel können Sie Cookies von Drittanbietern blockieren, aber alle anderen Cookies zulassen.
+				<br>
+				Wenn Sie feststellen möchten, welche Cookies in Ihrem Browser gespeichert wurden, wenn Sie Cookie-Einstellungen ändern oder löschen wollen, können Sie dies in Ihren Browser-Einstellungen finden:
+				<br>
+				Chrome: Cookies in Chrome löschen, aktivieren und verwalten
+				<br>
+				Safari: Verwalten von Cookies und Websitedaten mit Safari
+				<br>
+				Firefox: Cookies löschen, um Daten zu entfernen, die Websites auf Ihrem Computer abgelegt haben
+				<br>
+				Internet Explorer: Löschen und Verwalten von Cookies
+				<br>
+				Microsoft Edge: Löschen und Verwalten von Cookies
+				<br>
+				
+				Falls Sie grundsätzlich keine Cookies haben wollen, können Sie Ihren Browser so einrichten, dass er Sie immer informiert, wenn ein Cookie gesetzt werden soll. So können Sie bei jedem einzelnen Cookie entscheiden, ob Sie das Cookie erlauben oder nicht. Die Vorgangsweise ist je nach Browser verschieden. Am besten ist es Sie suchen die Anleitung in Google mit dem Suchbegriff “Cookies löschen Chrome” oder “Cookies deaktivieren Chrome” im Falle eines Chrome Browsers oder tauschen das Wort “Chrome” gegen den Namen Ihres Browsers, z.B. Edge, Firefox, Safari aus.
+
+				<br> <br>
+				<h3>Wie sieht es mit meinem Datenschutz aus?</h3>
+				<br>
+				Seit 2009 gibt es die sogenannten „Cookie-Richtlinien“. Darin ist festgehalten, dass das Speichern von Cookies eine Einwilligung des Website-Besuchers (also von Ihnen) verlangt. Innerhalb der EU-Länder gibt es allerdings noch sehr unterschiedliche Reaktionen auf diese Richtlinien. In Deutschland wurden die Cookie-Richtlinien nicht als nationales Recht umgesetzt. Stattdessen erfolgte die Umsetzung dieser Richtlinie weitgehend in § 15 Abs.3 des Telemediengesetzes (TMG).
+				<br>
+				Wenn Sie mehr über Cookies wissen möchten und vor technischen Dokumentationen nicht zurückscheuen, empfehlen wir https://tools.ietf.org/html/rfc6265, dem Request for Comments der Internet Engineering Task Force (IETF) namens “HTTP State Management Mechanism”.
+				Speicherung persönlicher Daten
+				<br>
+				Persönliche Daten, die Sie uns auf dieser Website elektronisch übermitteln, wie zum Beispiel Name, E-Mail-Adresse, Adresse oder andere persönlichen Angaben im Rahmen der Übermittlung eines Formulars oder Kommentaren im Blog, werden von uns gemeinsam mit dem Zeitpunkt und der IP-Adresse nur zum jeweils angegebenen Zweck verwendet, sicher verwahrt und nicht an Dritte weitergegeben.
+				<br>
+				Wir nutzen Ihre persönlichen Daten somit nur für die Kommunikation mit jenen Besuchern, die Kontakt ausdrücklich wünschen und für die Abwicklung der auf dieser Webseite angebotenen Dienstleistungen und Produkte. Wir geben Ihre persönlichen Daten ohne Zustimmung nicht weiter, können jedoch nicht ausschließen, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten eingesehen werden.
+				<br>
+				Wenn Sie uns persönliche Daten per E-Mail schicken – somit abseits dieser Webseite – können wir keine sichere Übertragung und den Schutz Ihrer Daten garantieren. Wir empfehlen Ihnen, vertrauliche Daten niemals unverschlüsselt per E-Mail zu übermitteln.
+				<br>
+				Die Rechtsgrundlage besteht nach Artikel 6  Absatz 1 a DSGVO (Rechtmäßigkeit der Verarbeitung) darin, dass Sie uns die Einwilligung zur Verarbeitung der von Ihnen eingegebenen Daten geben. Sie können diesen Einwilligung jederzeit widerrufen – eine formlose E-Mail reicht aus, Sie finden unsere Kontaktdaten im Impressum.
+				Rechte laut Datenschutzgrundverordnung
+				<br>
+				Ihnen stehen laut den Bestimmungen der DSGVO grundsätzlich die folgende Rechte zu:
+				<br>
+					Recht auf Berichtigung (Artikel 16 DSGVO)<br>
+					Recht auf Löschung („Recht auf Vergessenwerden“) (Artikel 17 DSGVO)<br>
+					Recht auf Einschränkung der Verarbeitung (Artikel 18 DSGVO)<br>
+					Recht auf Benachrichtigung – Mitteilungspflicht im Zusammenhang mit der Berichtigung oder Löschung personenbezogener Daten oder der Einschränkung der Verarbeitung (Artikel 19 DSGVO)<br>
+					Recht auf Datenübertragbarkeit (Artikel 20 DSGVO)<br>
+					Widerspruchsrecht (Artikel 21 DSGVO)<br>
+					Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung — einschließlich Profiling — beruhenden Entscheidung unterworfen zu werden (Artikel 22 DSGVO)<br>
+
+				Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich an die Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI) wenden.
+				TLS-Verschlüsselung mit https
+				<br>
+				Wir verwenden https um Daten abhörsicher im Internet zu übertragen (Datenschutz durch Technikgestaltung Artikel 25 Absatz 1 DSGVO). Durch den Einsatz von TLS (Transport Layer Security), einem Verschlüsselungsprotokoll zur sicheren Datenübertragung im Internet können wir den Schutz vertraulicher Daten sicherstellen. Sie erkennen die Benutzung dieser Absicherung der Datenübertragung am kleinen Schloßsymbol links oben im Browser und der Verwendung des Schemas https (anstatt http) als Teil unserer Internetadresse.
+			
+			
+			</div>
         </div>
     </div>
 </div>
